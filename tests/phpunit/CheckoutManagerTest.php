@@ -45,7 +45,10 @@ class CheckoutManagerTest extends TestCase {
 
 		$specialLogLoggerMock = $this->createMock( SpecialLogLogger::class );
 		$this->manager = new CheckoutManager(
-			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock
+			$this->user,
+			$this->checkoutRepoMock,
+			$this->eventRepoMock,
+			$specialLogLoggerMock
 		);
 	}
 

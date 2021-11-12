@@ -32,7 +32,7 @@ class PageCheckoutActivityTest extends TestCase {
 		$userMock = $this->createMock( User::class );
 		$userMock->method( 'isRegistered' )->willReturn( true );
 		$userFactoryMock = $this->createMock( UserFactory::class );
-		$userFactoryMock->method( 'newFromName' )->willReturnCallback( static function ( $username ) use ( $userMock ) {
+		$userFactoryMock->method( 'newFromName' )->willReturnCallback( function ( $username ) use ( $userMock ) {
 			return $username === 'UTSysop' ? $userMock : null;
 		} );
 
@@ -41,7 +41,7 @@ class PageCheckoutActivityTest extends TestCase {
 		$activity = new PageCheckoutActivity( $managerMock, $userFactoryMock, $titleFactoryMock, $taskMock );
 
 		$titleMock = $this->createMock( Title::class );
-		$titleFactoryMock->method( 'newFromID' )->willReturnCallback( static function ( $pageId ) use( $titleMock ) {
+		$titleFactoryMock->method( 'newFromID' )->willReturnCallback( function ( $pageId ) use( $titleMock ) {
 			return $pageId === 100 ? $titleMock : null;
 		} );
 		$context = new WorkflowContext( new DefinitionContext( [
