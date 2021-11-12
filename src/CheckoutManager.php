@@ -14,11 +14,11 @@ use User;
 
 class CheckoutManager {
 	/** @var User */
-	private User $actor;
+	private $actor;
 	/** @var CheckoutRepo */
-	private CheckoutRepo $checkoutRepo;
+	private $checkoutRepo;
 	/** @var CheckoutEventRepo */
-	private CheckoutEventRepo $eventRepo;
+	private $eventRepo;
 	/** @var array */
 	private $checkouts = [];
 	/** @var SpecialLogLogger */

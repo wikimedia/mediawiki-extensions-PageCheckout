@@ -45,7 +45,14 @@ class CheckoutManagerTest extends TestCase {
 
 		$specialLogLoggerMock = $this->createMock( SpecialLogLogger::class );
 		$this->manager = new CheckoutManager(
+<<<<<<< HEAD   (b8a138 build: Updating mediawiki/mediawiki-codesniffer to 38.0.0)
 			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock
+=======
+			$this->user,
+			$this->checkoutRepoMock,
+			$this->eventRepoMock,
+			$specialLogLoggerMock
+>>>>>>> CHANGE (63e0c7 [WIP] Fix ci issues)
 		);
 	}
 

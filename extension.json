@@ -42,8 +42,10 @@
 		"PageCheckout": "i18n"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\PageCheckout\\": "src/",
-		"MediaWiki\\Extension\\PageCheckout\\Tests\\": "tests/phpunit"
+		"MediaWiki\\Extension\\PageCheckout\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\PageCheckout\\Tests\\": "tests/phpunit/"
 	},
 	"APIModules": {
 		"pagecheckout-clear": {
