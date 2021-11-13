@@ -16,15 +16,15 @@ use User;
  * @covers \MediaWiki\Extension\PageCheckout\CheckoutManager
  */
 class CheckoutManagerTest extends TestCase {
-	/** @var CheckoutRepo|MockObject  */
+	/** @var CheckoutRepo|MockObject */
 	private $checkoutRepoMock;
-	/** @var CheckoutEventRepo|MockObject  */
+	/** @var CheckoutEventRepo|MockObject */
 	private $eventRepoMock;
-	/** @var CheckoutManager  */
+	/** @var CheckoutManager */
 	private $manager;
-	/** @var Title  */
+	/** @var Title */
 	private $title;
-	/** @var User  */
+	/** @var User */
 	private $user;
 
 	protected function setUp(): void {
@@ -44,7 +44,9 @@ class CheckoutManagerTest extends TestCase {
 		$this->user->method( 'isRegistered' )->willReturn( true );
 
 		$specialLogLoggerMock = $this->createMock( SpecialLogLogger::class );
-		$this->manager = new CheckoutManager( $this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock );
+		$this->manager = new CheckoutManager(
+			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock
+		);
 	}
 
 	/**

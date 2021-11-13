@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\PageCheckout\AlertProvider;
 
-use MWStake\MediaWiki\Component\AlertBanners\IAlertProvider;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
+use MWStake\MediaWiki\Component\AlertBanners\IAlertProvider;
 use RequestContext;
 
 class PageCheckout implements IAlertProvider {

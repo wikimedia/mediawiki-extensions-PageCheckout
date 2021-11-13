@@ -6,7 +6,7 @@ use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Extension\PageCheckout\SpecialLogLogger;
 
 return [
-	'PageCheckoutManager' => function ( \MediaWiki\MediaWikiServices $services ) {
+	'PageCheckoutManager' => static function ( \MediaWiki\MediaWikiServices $services ) {
 		return new CheckoutManager(
 			// No likey :(
 			RequestContext::getMain()->getUser(),
