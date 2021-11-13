@@ -76,7 +76,7 @@ abstract class CheckoutActivity extends GenericActivity {
 	}
 
 	/**
-	 * @param $data
+	 * @param array $data
 	 * @param WorkflowContext $context
 	 * @return Title|null
 	 */

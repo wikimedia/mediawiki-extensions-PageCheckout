@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
+
 namespace MediaWiki\Extension\PageCheckout\Hook;
 
 use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
@@ -13,7 +15,11 @@ use Skin;
 use Title;
 use User;
 
-class AddClearCheckoutAction implements SkinTemplateNavigation__UniversalHook, BeforePageDisplayHook, BlueSpiceDiscoveryTemplateDataProviderAfterInit {
+class AddClearCheckoutAction implements
+	SkinTemplateNavigation__UniversalHook,
+	BeforePageDisplayHook,
+	BlueSpiceDiscoveryTemplateDataProviderAfterInit
+{
 	/** @var PermissionManager */
 	private $permissionManager;
 	/** @var CheckoutManager */
