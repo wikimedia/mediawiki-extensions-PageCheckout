@@ -77,7 +77,7 @@
 		"getUserPermissionsErrors": "applyCheckout",
 		"SkinTemplateNavigation::Universal": "addClearCheckoutAction",
 		"BeforePageDisplay": "addClearCheckoutAction",
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "addClearCheckoutAction",
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeAlertBannersRegisterProviders": "addAlertBanner"
 	},
 	"HookHandlers": {
@@ -99,6 +99,9 @@
 		},
 		"addAlertBanner": {
 			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\AddAlertBanner"
+		},
+		"discovery-skin": {
+			"class": "\\MediaWiki\\Extension\\PageCheckout\\HookHandler\\DiscoverySkin"
 		}
 	},
 	"GroupPermissions": {
