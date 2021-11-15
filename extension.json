@@ -61,7 +61,7 @@
 				"clearAction.js"
 			],
 			"messages": [
-				"page-checkout-ui-clear-confirm"
+				"pagecheckout-ui-clear-confirm"
 			],
 			"dependencies": [
 				"oojs-ui"
@@ -118,7 +118,7 @@
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
 	],
-	"LogTypes": [ "page-checkout" ],
+	"LogTypes": [ "pagecheckout" ],
 	"LogActionsHandlers": {
 		"page-checkout/*": "LogFormatter"
 	},

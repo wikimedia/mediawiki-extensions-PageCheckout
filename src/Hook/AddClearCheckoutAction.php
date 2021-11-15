@@ -41,7 +41,7 @@ class AddClearCheckoutAction implements
 		}
 
 		$links['actions']['pc_clear'] = [
-			'text' => $sktemplate->getContext()->msg( 'page-checkout-action-clear-label' )->text(),
+			'text' => $sktemplate->getContext()->msg( 'pagecheckout-action-clear-label' )->text(),
 			'href' => '#',
 			'class' => false,
 			'id' => 'ca-pc_clear'

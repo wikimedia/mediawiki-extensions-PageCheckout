@@ -76,12 +76,12 @@ class CheckoutRepo {
 		}
 
 		if ( !$res ) {
-			throw new DBError( $db, 'page-checkout-error-db-insert' );
+			throw new DBError( $db, 'pagecheckout-error-db-insert' );
 		}
 
 		$inserted = $this->get( [ 'pcl_id' => $id ] );
 		if ( empty( $inserted ) ) {
-			throw new DBError( $db, 'page-checkout-error-db-retrieve-inserted' );
+			throw new DBError( $db, 'pagecheckout-error-db-retrieve-inserted' );
 		}
 
 		return array_shift( $inserted );
@@ -94,7 +94,7 @@ class CheckoutRepo {
 	 */
 	public function delete( CheckoutEntity $entity ): bool {
 		if ( !$entity->getId() ) {
-			throw new MWException( 'page-checkout-error-no-checkout-id' );
+			throw new MWException( 'pagecheckout-error-no-checkout-id' );
 		}
 
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );

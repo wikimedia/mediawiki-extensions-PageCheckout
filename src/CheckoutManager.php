@@ -48,13 +48,13 @@ class CheckoutManager {
 	 */
 	public function checkout( Title $title, User $forUser, $comment = '' ): CheckoutEntity {
 		if ( !$title->exists() ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-no-title' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-no-title' )->plain() );
 		}
 		if ( !$forUser->isRegistered() ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-no-user' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-no-user' )->plain() );
 		}
 		if ( $this->isCheckedOut( $title ) ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-has-checkout' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-has-checkout' )->plain() );
 		}
 		$entity = new CheckoutEntity( null, $title, $forUser );
 		$entity = $this->checkoutRepo->save( $entity );
@@ -64,7 +64,7 @@ class CheckoutManager {
 			return $entity;
 		}
 
-		throw new MWException( Message::newFromKey( 'page-checkout-error-save-failed' )->plain() );
+		throw new MWException( Message::newFromKey( 'pagecheckout-error-save-failed' )->plain() );
 	}
 
 	/**
@@ -76,7 +76,7 @@ class CheckoutManager {
 	public function checkIn( Title $title, $comment = '' ) {
 		$entity = $this->checkoutRepo->getForPage( $title );
 		if ( !$entity instanceof CheckoutEntity ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-no-checkout' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-no-checkout' )->plain() );
 		}
 		$res = $this->checkoutRepo->delete( $entity );
 		if ( $res ) {
@@ -96,7 +96,7 @@ class CheckoutManager {
 	public function clearCheckout( Title $title ) {
 		$entity = $this->checkoutRepo->getForPage( $title );
 		if ( !$entity instanceof CheckoutEntity ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-no-checkout' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-no-checkout' )->plain() );
 		}
 		$res = $this->checkoutRepo->delete( $entity );
 		if ( $res ) {
@@ -145,7 +145,7 @@ class CheckoutManager {
 
 		$res = $this->eventRepo->save( $event );
 		if ( !$res ) {
-			throw new MWException( Message::newFromKey( 'page-checkout-error-save-event' )->plain() );
+			throw new MWException( Message::newFromKey( 'pagecheckout-error-save-event' )->plain() );
 		}
 
 		$this->specialLogLogger->log( $entity, $this->actor, $action, $comment );
