@@ -15,6 +15,7 @@ use TitleFactory;
 use User;
 
 /**
+ * @group Broken
  * @covers \MediaWiki\Extension\PageCheckout\Activity\PageCheckoutActivity
  * @group Database
  */

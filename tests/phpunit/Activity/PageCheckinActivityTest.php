@@ -6,6 +6,7 @@ use MediaWiki\Extension\PageCheckout\Activity\PageCheckInActivity;
 use MediaWiki\Extension\Workflows\Exception\WorkflowExecutionException;
 
 /**
+ * @group Broken
  * @covers \MediaWiki\Extension\PageCheckout\Activity\PageCheckInActivity
  * @group Database
  */
