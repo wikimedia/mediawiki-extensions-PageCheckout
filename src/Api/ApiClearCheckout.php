@@ -31,7 +31,7 @@ class ApiClearCheckout extends ApiBase {
 		$title = Title::newFromText( $params['page_title'] );
 		$checkout = $this->manager->getCheckoutEntity( $title );
 		if ( !$checkout instanceof CheckoutEntity ) {
-			$this->dieStatus( \Status::newFatal( 'page-checkout-error-no-checkout' ) );
+			$this->dieStatus( \Status::newFatal( 'pagecheckout-error-no-checkout' ) );
 		}
 
 		$res = $this->manager->clearCheckout( $title );

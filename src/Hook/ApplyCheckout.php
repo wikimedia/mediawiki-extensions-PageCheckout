@@ -47,7 +47,7 @@ class ApplyCheckout implements GetUserPermissionsErrorsHook {
 		}
 
 		$result = Message::newFromKey(
-			'page-checkout-lockdown-reason',
+			'pagecheckout-lockdown-reason',
 			Message::newFromKey( "right-$action" )->text(),
 			$entity->getUser()->getName()
 		);

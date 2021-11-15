@@ -1,26 +1,31 @@
 {
-	"@meta": {
-		"authors": "HalloWelt! GmbH"
+	"@metadata": {
+		"authors": [
+			"Dejan Savuljesku",
+			"Patric Wirth"
+		]
 	},
 	"pagecheckout-desc": "Allows exclusive rights on a page for a user",
-	"page-checkout-error-no-title": "Invalid title",
-	"page-checkout-error-no-user": "Invalid user given",
-	"page-checkout-error-has-checkout": "Page already checked-out",
-	"page-checkout-error-save-failed": "Failed to checkout the page",
-	"page-checkout-error-no-checkout": "Cannot check-in page that is not currently checked-out",
-	"page-checkout-error-no-checkout-id": "Check-in failure! No checkout ID set",
-	"page-checkout-error-db-insert": "Failed to insert checkout",
-	"page-checkout-error-db-retrieve-inserted": "Failed to retrieve previously inserted checkout",
-	"page-checkout-error-save-event": "Failed to save event",
-	"page-checkout-lockdown-reason": "Action \"$1\" is not allowed, because page is checked out by $2",
-	"page-checkout-action-clear-label": "Clear checkout",
+	"pagecheckout-error-no-title": "Invalid title",
+	"pagecheckout-error-no-user": "Invalid user given",
+	"pagecheckout-error-has-checkout": "Page already checked-out",
+	"pagecheckout-error-save-failed": "Failed to checkout the page",
+	"pagecheckout-error-no-checkout": "Cannot check-in page that is not currently checked-out",
+	"pagecheckout-error-no-checkout-id": "Check-in failure! No checkout ID set",
+	"pagecheckout-error-db-insert": "Failed to insert checkout",
+	"pagecheckout-error-db-retrieve-inserted": "Failed to retrieve previously inserted checkout",
+	"pagecheckout-error-save-event": "Failed to save event",
+	"pagecheckout-lockdown-reason": "Action \"$1\" is not allowed, because page is checked out by $2",
+	"pagecheckout-action-clear-label": "Clear checkout",
 	"apihelp-pagecheckout-clear-example": "Clear checkout for Main_Page",
 	"apihelp-pagecheckout-clear-summary": "Clear active page checkout",
 	"apihelp-pagecheckout-clear-param-page_title": "Title of the page for which to clear checkouts",
-	"page-checkout-ui-clear-confirm": "Confirm clearing active checkout on this page? This will make page editable for all normally eligible users",
-	"log-name-page-checkout": "Page checkouts",
-	"log-description-page-checkout": "Tracks the state of page checkouts and checkins",
-	"logentry-page-checkout-checkin": "$1 {{GENDER:$2|checked in}} page $3 that was checked out for user $4",
-	"logentry-page-checkout-checkout": "$1 {{GENDER:$2|checked out}} page $3 for user $4",
-	"pagecheckout-alertbanner-checkout": "This page is currently {{GENDER:$1|checked out}} for $2"
+	"pagecheckout-ui-clear-confirm": "Confirm clearing active checkout on this page? This will make page editable for all normally eligible users",
+	"log-name-pagecheckout": "Page checkouts",
+	"log-description-pagecheckout": "Tracks the state of page checkouts and checkins",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|checked in}} page $3 that was checked out for user $4",
+	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|checked out}} page $3 for user $4",
+	"pagecheckout-alertbanner-checkout": "This page is currently {{GENDER:$1|checked out}} for $2",
+	"action-page-checkout-clear": "clear the page checkout",
+	"right-page-checkout-clear": "Clear the page checkout"
 }
