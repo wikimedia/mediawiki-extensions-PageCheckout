@@ -4,8 +4,6 @@
 
 namespace MediaWiki\Extension\PageCheckout\Hook;
 
-use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
-use BlueSpice\Discovery\ITemplateDataProvider;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
@@ -17,8 +15,7 @@ use User;
 
 class AddClearCheckoutAction implements
 	SkinTemplateNavigation__UniversalHook,
-	BeforePageDisplayHook,
-	BlueSpiceDiscoveryTemplateDataProviderAfterInit
+	BeforePageDisplayHook
 {
 	/** @var PermissionManager */
 	private $permissionManager;
@@ -83,11 +80,4 @@ class AddClearCheckoutAction implements
 		$out->addModules( 'ext.pagecheckout.clear' );
 	}
 
-	/**
-	 * @param ITemplateDataProvider $registry
-	 */
-	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void {
-		$registry->register( 'actions_secondary', 'ca-pc_clear' );
-		$registry->unregister( 'toolbox', 'ca-pc_clear' );
-	}
 }
