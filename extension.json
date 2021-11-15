@@ -113,7 +113,7 @@
 		}
 	},
 	"AvailableRights": [
-		"page-checkout-set"
+		"page-checkout-clear"
 	],
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
