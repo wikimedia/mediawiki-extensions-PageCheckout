@@ -1,5 +1,5 @@
 {
-	"name": "hallowelt/pagecheckout",
+	"name": "mediawiki/page-checkout",
 	"type": "mediawiki-extension",
 	"extra": {
 		"installer-name": "PageCheckout"
