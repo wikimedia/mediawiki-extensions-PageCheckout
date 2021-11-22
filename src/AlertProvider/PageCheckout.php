@@ -27,11 +27,24 @@ class PageCheckout implements IAlertProvider {
 		if ( !$context->getTitle() || !$context->getTitle()->exists() ) {
 			return '';
 		}
-		if ( !$this->manager->isCheckedOut( $context->getTitle() ) ) {
+		$entity = $this->manager->getCheckoutEntity( $context->getTitle() );
+		if ( !$entity ) {
 			return '';
 		}
-		$user = $this->manager->getCheckoutEntity( $context->getTitle() )->getUser();
+		$user = $entity->getUser();
+		$payload = $entity->getPayload();
+		$alertText = $payload['alertText'] ?? null;
+
+		if ( $alertText ) {
+			return $alertText;
+		}
+		$comment = $payload['comment'] ?? null;
 		$realname = empty( $user->getRealName() ) ? $user->getName() : $user->getRealName();
+		if ( $comment ) {
+			return $context->msg( 'pagecheckout-alertbanner-checkout-with-comment' )
+				->params( $user->getName(), $realname, $comment )
+				->text();
+		}
 		return $context->msg( 'pagecheckout-alertbanner-checkout' )
 			->params( $user->getName(), $realname )
 			->text();

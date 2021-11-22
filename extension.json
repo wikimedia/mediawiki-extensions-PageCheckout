@@ -35,6 +35,14 @@
 						]
 					}
 				}
+			},
+			"WorkflowListeners": {
+				"clear-checkout-on-abort": {
+					"class": "MediaWiki\\Extension\\PageCheckout\\Workflows\\Consumer\\ClearCheckoutOnAbort",
+					"services": [
+						"PageCheckoutManager"
+					]
+				}
 			}
 		}
 	},

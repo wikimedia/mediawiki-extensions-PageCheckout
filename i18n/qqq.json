@@ -27,5 +27,9 @@
 	"logentry-pagecheckout-checkout": "Log message about a user, that checked-out a page for a user\n*$1 - Realname of the user, that checked-out a page for a user\n*$2 - Username of the user that checked-out a page for a user. Use GENDER\n*$3 - Name of the page, that was checked-out by the user for a user.\n*$4 - Realname of the user, the page was checked-out for",
 	"pagecheckout-alertbanner-checkout": "Message in the banner on top of the page, that is currently checked-out for a user\n.*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.",
 	"action-page-checkout-clear": "{{doc-action|page-checkout-clear}}",
-	"right-page-checkout-clear": "{{doc-right|page-checkout-clear}}"
+	"right-page-checkout-clear": "{{doc-right|page-checkout-clear}}",
+	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available\n.*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.\n*$3 - comment",
+	"page-checkout-workflow-activity-checkout-reason": "Message in the banner on top of the page, that is currently checked-out, in case a generic checkout is set, due to a running workflow",
+	"page-checkout-workflow-activity-checkout-non-generic-reason": "Comment on the checkout entity, when workflow checks the page out",
+	"page-checkout-workflow-clear-checkout": "Comment text when page is checked-in due to workflow abort"
 }

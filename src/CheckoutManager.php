@@ -42,11 +42,11 @@ class CheckoutManager {
 	/**
 	 * @param Title $title
 	 * @param User $forUser
-	 * @param string $comment
+	 * @param array|null $payload Custom data to add to entity
 	 * @return CheckoutEntity
 	 * @throws MWException
 	 */
-	public function checkout( Title $title, User $forUser, $comment = '' ): CheckoutEntity {
+	public function checkout( Title $title, User $forUser, $payload = [] ): CheckoutEntity {
 		if ( !$title->exists() ) {
 			throw new MWException( Message::newFromKey( 'pagecheckout-error-no-title' )->plain() );
 		}
@@ -56,10 +56,10 @@ class CheckoutManager {
 		if ( $this->isCheckedOut( $title ) ) {
 			throw new MWException( Message::newFromKey( 'pagecheckout-error-has-checkout' )->plain() );
 		}
-		$entity = new CheckoutEntity( null, $title, $forUser );
+		$entity = new CheckoutEntity( null, $title, $forUser, $payload );
 		$entity = $this->checkoutRepo->save( $entity );
 		if ( $entity instanceof CheckoutEntity ) {
-			$this->recordEvent( $entity, 'checkout', $comment );
+			$this->recordEvent( $entity, 'checkout', $payload['comment'] ?? '' );
 			$this->checkouts[$title->getArticleID()] = $entity;
 			return $entity;
 		}
