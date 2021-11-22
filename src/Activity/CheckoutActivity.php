@@ -22,6 +22,8 @@ abstract class CheckoutActivity extends GenericActivity {
 	protected $userFactory;
 	/** @var TitleFactory */
 	protected $titleFactory;
+	/** @var WorkflowContext */
+	protected $workflowContext;
 
 	/**
 	 * CheckoutActivity constructor.
@@ -63,7 +65,7 @@ abstract class CheckoutActivity extends GenericActivity {
 				'No valid title can be constructed from params', $this->getTask()
 			);
 		}
-
+		$this->workflowContext = $context;
 		try {
 			$this->doAction( $user, $title );
 		} catch ( \Exception $ex ) {
