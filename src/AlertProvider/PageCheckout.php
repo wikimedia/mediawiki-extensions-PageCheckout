@@ -41,7 +41,7 @@ class PageCheckout implements IAlertProvider {
 	 * @return string
 	 */
 	public function getType(): string {
-		return IAlertProvider::TYPE_INFO;
+		return IAlertProvider::TYPE_DANGER;
 	}
 
 }
