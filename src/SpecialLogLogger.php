@@ -15,7 +15,7 @@ class SpecialLogLogger {
 	 * @throws \MWException
 	 */
 	public function log( CheckoutEntity $entity, User $actor, $action, $comment ) {
-		$logEntry = new ManualLogEntry( 'page-checkout', $action );
+		$logEntry = new ManualLogEntry( 'pagecheckout', $action );
 		$logEntry->setPerformer( $actor );
 		$logEntry->setTarget( $entity->getTitle() );
 		$logEntry->setComment( $comment );
