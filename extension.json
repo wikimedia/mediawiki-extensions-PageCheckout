@@ -120,7 +120,7 @@
 	],
 	"LogTypes": [ "pagecheckout" ],
 	"LogActionsHandlers": {
-		"page-checkout/*": "LogFormatter"
+		"pagecheckout/*": "LogFormatter"
 	},
 	"manifest_version": 2
 }
