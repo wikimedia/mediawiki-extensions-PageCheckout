@@ -127,7 +127,7 @@ class CheckoutRepo {
 				$row->pcl_id,
 				$title,
 				$user,
-				json_decode( $row->pcl_payload ) ?? []
+				json_decode( $row->pcl_payload, 1 ) ?? []
 			);
 		}
 
