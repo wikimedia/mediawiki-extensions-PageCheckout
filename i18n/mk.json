@@ -26,5 +26,9 @@
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|ја зема}} страницата $3 за корисникот $4",
 	"pagecheckout-alertbanner-checkout": "Оваа страница е моментално {{GENDER:$1|земена}} за $2",
 	"action-page-checkout-clear": "исчисти земање на страницата",
-	"right-page-checkout-clear": "Исчисти земање на страницата"
+	"right-page-checkout-clear": "Исчисти земање на страницата",
+	"pagecheckout-alertbanner-checkout-with-comment": "Оваа страница е моментално {{GENDER:$1|земена}} за $2. Коментар: $3",
+	"page-checkout-workflow-activity-checkout-reason": "Оваа страница е моментално земена поради работен тек кој е одвива",
+	"page-checkout-workflow-activity-checkout-non-generic-reason": "Земена поради извршување на работен тек",
+	"page-checkout-workflow-clear-checkout": "Земеното е исчистено поради напуштен работен тек"
 }
