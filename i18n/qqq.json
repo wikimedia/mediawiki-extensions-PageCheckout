@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Dejan Savuljesku",
-			"Patric Wirth"
+			"Patric Wirth",
+			"Umherirrender"
 		]
 	},
 	"pagecheckout-desc": "{{desc|name=PageCheckout}}",
@@ -17,7 +18,7 @@
 	"pagecheckout-error-save-event": "Generic error message when an event could not be saved",
 	"pagecheckout-lockdown-reason": "Extended permission error when the user is not allowed to perform an action on a page due to the page being checked out.\n*$1 - Action, that the user tried to perform on the checked-out page.\n*$2 - Username or Realname of the user, that the page is currently checkout-out to",
 	"pagecheckout-action-clear-label": "Label for link, that allowes to clear the checkout for the current page.\n{{Identical|Clear checkout}}",
-	"apihelp-pagecheckout-clear-example": "Message for example example in API module \"pagecheckout-clear\"",
+	"apihelp-pagecheckout-clear-example": "{{doc-apihelp-example|pagecheckout-clear}}",
 	"apihelp-pagecheckout-clear-summary": "{{doc-apihelp-summary|pagecheckout-clear}}",
 	"apihelp-pagecheckout-clear-param-page_title": "{{doc-apihelp-param|pagecheckout-clear|page_title}}",
 	"pagecheckout-ui-clear-confirm": "Confirmation message that asks the user if the user really wants to clear the checkout-out of the current page and warns the user, that this will make page editable for all normally eligible users",
