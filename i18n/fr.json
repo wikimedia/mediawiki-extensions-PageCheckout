@@ -27,5 +27,9 @@
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|a réservé}} la page $3 pour l’utilisateur $4",
 	"pagecheckout-alertbanner-checkout": "Cette page est actuellement {{GENDER:$1|réservée}} pour $2",
 	"action-page-checkout-clear": "effacer la réservation de la page",
-	"right-page-checkout-clear": "Effacer la réservation de la page"
+	"right-page-checkout-clear": "Effacer la réservation de la page",
+	"pagecheckout-alertbanner-checkout-with-comment": "Cette page est actuellement {{GENDER:$1|réservée}} pour $2. Commentaire : $3",
+	"page-checkout-workflow-activity-checkout-reason": "Cette page est actuellement réservée du fait d’un processus en cours",
+	"page-checkout-workflow-activity-checkout-non-generic-reason": "Réservé pendant l’exécution du processus",
+	"page-checkout-workflow-clear-checkout": "Réservation supprimée du fait de l’annulation du processus"
 }
