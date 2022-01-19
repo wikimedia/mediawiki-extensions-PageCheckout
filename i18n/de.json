@@ -25,5 +25,8 @@
 	"pagecheckout-alertbanner-checkout-with-comment": "Die Seite ist aktuell für $2 {{GENDER: $1| ausgecheckt }}. Kommentar: $3",
 	"page-checkout-workflow-activity-checkout-reason": "Diese Seite ist derzeit aufgrund eines laufenden Workflows ausgecheckt",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Während der Workflow-Ausführung ausgecheckt",
-	"page-checkout-workflow-clear-checkout": "Checkout aufgrund Abbruch des Workflows aufgehoben"
+	"page-checkout-workflow-clear-checkout": "Checkout aufgrund Abbruch des Workflows aufgehoben",
+	"apihelp-pagecheckout-clear-example": "Checkout für Hauptseite aufheben",
+	"apihelp-pagecheckout-clear-summary": "Aktiven Seiten-Checkout aufheben",
+	"apihelp-pagecheckout-clear-param-page_title": "Titel der Seite auf der Checkouts aufgehoben werden sollen"
 }
