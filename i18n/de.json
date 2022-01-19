@@ -25,6 +25,8 @@
 	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2| hat }} die Seite $3, die für den Benutzer $4 ausgecheckt war, eingecheckt",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2| hat }} die Seite $3 für den Benutzer $4 ausgecheckt",
 	"pagecheckout-alertbanner-checkout": "Diese Seite ist derzeit für $2 {{GENDER:$1: ausgecheckt}}",
+	"action-page-checkout-clear": "den Checkout der Seite aufzuheben",
+	"right-page-checkout-clear": "Checkout der Seite aufheben",
 	"pagecheckout-alertbanner-checkout-with-comment": "Die Seite ist aktuell für $2 {{GENDER: $1| ausgecheckt }}. Kommentar: $3",
 	"page-checkout-workflow-activity-checkout-reason": "Diese Seite ist derzeit aufgrund eines laufenden Workflows ausgecheckt",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Während der Workflow-Ausführung ausgecheckt",
