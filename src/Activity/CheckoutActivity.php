@@ -53,8 +53,13 @@ abstract class CheckoutActivity extends GenericActivity {
 				'Property \"user\" must be set', $this->getTask()
 			);
 		}
-		$user = $this->userFactory->newFromName( $data['user'] );
-		if ( !$user instanceof User || !$user->isRegistered() ) {
+		if ( $data['user'] === 'Mediawiki default' ) {
+			// UserFactory does not have "newSystemUser" method :(
+			$user = User::newSystemUser( $data['user'] );
+		} else {
+			$user = $this->userFactory->newFromName( $data['user'] );
+		}
+		if ( !$user instanceof User || ( !$user->isRegistered() && !$user->isSystemUser() ) ) {
 			throw new WorkflowExecutionException(
 				'Property \"user\" must be set to a valid user', $this->getTask()
 			);
