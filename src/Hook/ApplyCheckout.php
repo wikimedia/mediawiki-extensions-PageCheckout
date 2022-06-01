@@ -13,7 +13,8 @@ class ApplyCheckout implements GetUserPermissionsErrorsHook {
 	private $permissions = [
 		'edit',
 		'move',
-		'delete'
+		'delete',
+		'review'
 	];
 
 	/** @var CheckoutManager */
