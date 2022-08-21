@@ -72,7 +72,8 @@
 				"pagecheckout-ui-clear-confirm"
 			],
 			"dependencies": [
-				"oojs-ui"
+				"mediawiki.api",
+				"oojs-ui-windows"
 			]
 		}
 	},
