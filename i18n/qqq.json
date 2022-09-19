@@ -3,7 +3,8 @@
 		"authors": [
 			"Dejan Savuljesku",
 			"Patric Wirth",
-			"Umherirrender"
+			"Umherirrender",
+			"Verdy p"
 		]
 	},
 	"pagecheckout-desc": "{{desc|name=PageCheckout}}",
@@ -29,7 +30,7 @@
 	"pagecheckout-alertbanner-checkout": "Message in the banner on top of the page, that is currently checked-out for a user\n.*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.",
 	"action-page-checkout-clear": "{{doc-action|page-checkout-clear}}",
 	"right-page-checkout-clear": "{{doc-right|page-checkout-clear}}",
-	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available\n.*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.\n*$3 - comment",
+	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available.\n\n*$1 - Username of the user, the page is currently checked-out for. To be used with GENDER.\n*$2 - Real name or display name of the user, the page is currently checked-out for.\n*$3 - Comment",
 	"page-checkout-workflow-activity-checkout-reason": "Message in the banner on top of the page, that is currently checked-out, in case a generic checkout is set, due to a running workflow",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Comment on the checkout entity, when workflow checks the page out",
 	"page-checkout-workflow-clear-checkout": "Comment text when page is checked-in due to workflow abort"
