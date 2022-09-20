@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\PageCheckout\Repo;
 use DateTime;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEvent;
+use MediaWiki\MediaWikiServices;
 use Title;
 use User;
 use Wikimedia\Rdbms\ILoadBalancer;
@@ -96,7 +97,7 @@ class CheckoutEventRepo {
 		return new CheckoutEntity(
 			(int)$entityData['id'],
 			Title::newFromText( $entityData['title'] ),
-			User::newFromName( $entityData['user'] ),
+			MediaWikiServices::getInstance()->getUserFactory()->newFromName( $entityData['user'] ),
 			$entityData['payload']
 		);
 	}
