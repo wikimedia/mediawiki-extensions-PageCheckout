@@ -53,7 +53,7 @@ class ApiClearCheckout extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'page_title' => [
-				ApiBase::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => true
 			]
 		];
