@@ -85,7 +85,7 @@ class CheckoutEvent implements JsonSerializable {
 	/**
 	 * @return array
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return [
 			'action' => $this->getAction(),
 			'actor' => $this->getActor()->getName(),
