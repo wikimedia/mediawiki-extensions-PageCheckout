@@ -28,7 +28,7 @@
 	"action-page-checkout-clear": "cancellar le reservation del pagina",
 	"right-page-checkout-clear": "Cancellar le reservation del pagina",
 	"pagecheckout-alertbanner-checkout-with-comment": "Iste pagina es actualmente {{GENDER:$1|reservate}} pro $2. Commento: $3",
-	"page-checkout-workflow-activity-checkout-reason": "Iste pagina es actualmente reservate a causa de un fluxo de labor active",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Reservate durante le execution de un fluxo de labor",
-	"page-checkout-workflow-clear-checkout": "Reservation cancellate a causa del interruption del fluxo de labor"
+	"page-checkout-workflow-activity-checkout-reason": "Iste pagina es actualmente reservate a causa de un fluxo de travalio active",
+	"page-checkout-workflow-activity-checkout-non-generic-reason": "Reservate durante le execution de un fluxo de travalio",
+	"page-checkout-workflow-clear-checkout": "Reservation cancellate a causa del interruption del fluxo de travalio"
 }
