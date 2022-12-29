@@ -5,5 +5,6 @@
 		]
 	},
 	"pagecheckout-error-no-title": "Nevažeći naslov",
-	"pagecheckout-error-no-user": "Nevažeći korisnik"
+	"pagecheckout-error-no-user": "Nevažeći korisnik",
+	"pagecheckout-desc": "Omogućuje ekskluzivna prava na stranici za korisnika"
 }
