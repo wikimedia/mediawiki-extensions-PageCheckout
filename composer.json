@@ -5,7 +5,7 @@
 		"installer-name": "PageCheckout"
 	},
 	"require": {
-		"composer/installers": "~1.0"
+		"composer/installers": "~1.0|~2"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "40.0.1",
