@@ -96,7 +96,7 @@ class PageCheckoutActivityTest extends TestCase {
 	/**
 	 * @return array[]
 	 */
-	public function provideExceptionData() {
+	public static function provideExceptionData() {
 		return [
 			'username-not-set' => [
 				null, 100
