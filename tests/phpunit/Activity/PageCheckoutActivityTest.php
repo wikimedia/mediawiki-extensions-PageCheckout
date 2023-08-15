@@ -109,11 +109,4 @@ class PageCheckoutActivityTest extends TestCase {
 			]
 		];
 	}
-
-	/**
-	 * @return bool
-	 */
-	public function needsDB() {
-		return true;
-	}
 }
