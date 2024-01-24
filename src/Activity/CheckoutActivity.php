@@ -92,10 +92,10 @@ abstract class CheckoutActivity extends GenericActivity {
 	 * @return Title|null
 	 */
 	private function getAffectedTitle( $data, WorkflowContext $context ) {
-		if ( isset( $data['pageId'] ) ) {
+		if ( !empty( $data['pageId'] ) ) {
 			return $this->titleFactory->newFromID( $data['pageId'] );
 		}
-		if ( isset( $data['pagename'] ) ) {
+		if ( !empty( $data['pagename'] ) ) {
 			return $this->titleFactory->newFromText( $data['pagename'] );
 		}
 

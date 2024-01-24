@@ -43,7 +43,10 @@
 						"PageCheckoutManager"
 					]
 				}
-			}
+			},
+			"EditorPluginModules": [
+				"ext.pagecheckout.workflows.editor.customElements"
+			]
 		}
 	},
 	"MessagesDirs": {
@@ -74,6 +77,34 @@
 			"dependencies": [
 				"mediawiki.api",
 				"oojs-ui-windows"
+			]
+		},
+		"ext.pagecheckout.workflows.editor.customElements": {
+			"scripts": [
+				"ui/workflows/inspector/PageCheckinInspector.js",
+				"ui/workflows/inspector/PageCheckoutInspector.js",
+				"ui/workflows/registerCustomElements.js"
+			],
+			"styles": [
+				"ui/workflows/customElements.css"
+			],
+			"messages": [
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-title",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename-help",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force-help",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkin-title",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename",
+				"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help"
+			],
+			"dependencies": [
+				"ext.workflows.editor.inspector.bootstrap",
+				"ext.workflows.editor.customElements.bootstrap"
 			]
 		}
 	},
