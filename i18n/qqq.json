@@ -33,5 +33,18 @@
 	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available.\n\n*$1 - Username of the user, the page is currently checked-out for. To be used with GENDER.\n*$2 - Real name or display name of the user, the page is currently checked-out for.\n*$3 - Comment",
 	"page-checkout-workflow-activity-checkout-reason": "Message in the banner on top of the page, that is currently checked-out, in case a generic checkout is set, due to a running workflow",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Comment on the checkout entity, when workflow checks the page out",
-	"page-checkout-workflow-clear-checkout": "Comment text when page is checked-in due to workflow abort"
+	"page-checkout-workflow-clear-checkout": "Comment text when page is checked-in due to workflow abort",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Inspector title",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Field label",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "Field help message",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename": "Field label",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename-help": "Field help message",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force": "Field label",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force-help": "Field help message",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Inspector title",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Field label.\n{{Identical|User}}",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "Field help message",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Field label.\n{{Identical|Page name}}",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Field help message",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-force": "Field label.\n{{Identical|Force?}}"
 }
