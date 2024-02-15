@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"pagecheckout-error-no-title": "Net valabelen Titel"
+	"pagecheckout-error-no-title": "Net valabelen Titel",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Benotzer",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Benotzer"
 }
