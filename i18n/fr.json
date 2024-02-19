@@ -3,6 +3,7 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Gomoko",
+			"SleaY",
 			"Verdy p"
 		]
 	},
@@ -32,5 +33,7 @@
 	"pagecheckout-alertbanner-checkout-with-comment": "Cette page est actuellement réservée pour {{GENDER:$1|}}$2. Commentaire : $3",
 	"page-checkout-workflow-activity-checkout-reason": "Cette page est actuellement réservée du fait d’un processus de travail en cours",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Réservé durant l’exécution d’un processus de travail",
-	"page-checkout-workflow-clear-checkout": "Réservation supprimée du fait de l’annulation d’un processus de travail"
+	"page-checkout-workflow-clear-checkout": "Réservation supprimée du fait de l’annulation d’un processus de travail",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Utilisateur",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Utilisateur"
 }
