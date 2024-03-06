@@ -4,7 +4,8 @@
 			"Dejan Savuljesku",
 			"Patric Wirth",
 			"Umherirrender",
-			"Verdy p"
+			"Verdy p",
+			"Jon Harald Søby"
 		]
 	},
 	"pagecheckout-desc": "{{desc|name=PageCheckout}}",
@@ -27,7 +28,7 @@
 	"log-description-pagecheckout": "Used in [[Special:Log]], description of the log type",
 	"logentry-pagecheckout-checkin": "Log message about a user, that checked-in a page for a user\n*$1 - Realname of the user, that checked-in a page for a user\n*$2 - Username of the user that checked-in a page for a user. Use GENDER\n*$3 - Name of the page, that was checked-in by the user for a user.\n*$4 - Realname of the user, the page was checked-in for",
 	"logentry-pagecheckout-checkout": "Log message about a user, that checked-out a page for a user\n*$1 - Realname of the user, that checked-out a page for a user\n*$2 - Username of the user that checked-out a page for a user. Use GENDER\n*$3 - Name of the page, that was checked-out by the user for a user.\n*$4 - Realname of the user, the page was checked-out for",
-	"pagecheckout-alertbanner-checkout": "Message in the banner on top of the page, that is currently checked-out for a user\n.*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.",
+	"pagecheckout-alertbanner-checkout": "Message in the banner on top of the page, that is currently checked-out for a user\n\nParameters:\n*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.",
 	"action-page-checkout-clear": "{{doc-action|page-checkout-clear}}",
 	"right-page-checkout-clear": "{{doc-right|page-checkout-clear}}",
 	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available.\n\n*$1 - Username of the user, the page is currently checked-out for. To be used with GENDER.\n*$2 - Real name or display name of the user, the page is currently checked-out for.\n*$3 - Comment",
