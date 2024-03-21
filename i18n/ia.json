@@ -30,5 +30,12 @@
 	"pagecheckout-alertbanner-checkout-with-comment": "Iste pagina es actualmente {{GENDER:$1|reservate}} pro $2. Commento: $3",
 	"page-checkout-workflow-activity-checkout-reason": "Iste pagina es actualmente reservate a causa de un fluxo de travalio active",
 	"page-checkout-workflow-activity-checkout-non-generic-reason": "Reservate durante le execution de un fluxo de travalio",
-	"page-checkout-workflow-clear-checkout": "Reservation cancellate a causa del interruption del fluxo de travalio"
+	"page-checkout-workflow-clear-checkout": "Reservation cancellate a causa del interruption del fluxo de travalio",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Usator",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename": "Nomine del pagina",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename-help": "Si non es specificate, le pagina de contexto del fluxo de travalio essera usate",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force": "Fortiar?",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Usator",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Nomine del pagina",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Si non es specificate, le pagina de contexto del fluxo de travalio essera usate"
 }
