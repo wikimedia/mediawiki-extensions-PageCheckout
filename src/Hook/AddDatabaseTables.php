@@ -2,25 +2,24 @@
 
 namespace MediaWiki\Extension\PageCheckout\Hook;
 
-use DatabaseUpdater;
 use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
 
 class AddDatabaseTables implements LoadExtensionSchemaUpdatesHook {
 
 	/**
-	 * @param DatabaseUpdater $updater
-	 * @return bool
+	 * @inheritDoc
 	 */
 	public function onLoadExtensionSchemaUpdates( $updater ) {
-		$base = dirname( dirname( __DIR__ ) ) . '/db';
+		$dbType = $updater->getDB()->getType();
+		$base = dirname( __DIR__, 2 );
 
 		$updater->addExtensionTable(
 			'page_checkout_event',
-			"$base/page_checkout_event.sql"
+			"$base/db/$dbType/page_checkout_event.sql"
 		);
 		$updater->addExtensionTable(
 			'page_checkout_locks',
-			"$base/page_checkout_locks.sql"
+			"$base/db/$dbType/page_checkout_locks.sql"
 		);
 
 		return true;
