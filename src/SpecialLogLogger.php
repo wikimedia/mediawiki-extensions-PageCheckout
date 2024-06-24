@@ -18,6 +18,8 @@ class SpecialLogLogger {
 		$logEntry->setPerformer( $actor );
 		$logEntry->setTarget( $entity->getTitle() );
 		$logEntry->setComment( $comment );
+		// Messages where this parameter will appear: logentry-pagecheckout-checkin,
+		// logentry-pagecheckout-checkout
 		$logEntry->setParameters( [
 			'4::affectedUser' => $entity->getUser()->getName()
 		] );
