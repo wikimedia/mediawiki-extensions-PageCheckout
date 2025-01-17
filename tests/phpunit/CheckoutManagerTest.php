@@ -7,9 +7,9 @@ use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutEventRepo;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Extension\PageCheckout\SpecialLogLogger;
+use MediaWiki\Title\Title;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Title;
 use User;
 
 /**

@@ -7,9 +7,9 @@ use EventSauce\EventSourcing\Message;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\Workflows\Storage\Event\WorkflowAborted;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Message as MediaWikiMessage;
 use MWException;
-use Title;
 
 class ClearCheckoutOnAbort implements Consumer {
 	/** @var CheckoutManager */

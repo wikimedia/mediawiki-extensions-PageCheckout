@@ -6,7 +6,7 @@ use DateTime;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEvent;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 use User;
 use Wikimedia\Rdbms\ILoadBalancer;
 
