@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\PageCheckout\Hook;
 
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
 use User;
 
 class ApplyCheckout implements GetUserPermissionsErrorsHook {

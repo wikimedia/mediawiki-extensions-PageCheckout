@@ -6,7 +6,7 @@ use ApiBase;
 use ApiMain;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
-use Title;
+use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ApiClearCheckout extends ApiBase {

@@ -8,9 +8,9 @@ use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use OutputPage;
 use Skin;
-use Title;
 use User;
 
 class AddClearCheckoutAction implements

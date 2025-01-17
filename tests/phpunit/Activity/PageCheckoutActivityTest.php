@@ -8,9 +8,9 @@ use MediaWiki\Extension\Workflows\Definition\DefinitionContext;
 use MediaWiki\Extension\Workflows\Definition\Element\Task;
 use MediaWiki\Extension\Workflows\Exception\WorkflowExecutionException;
 use MediaWiki\Extension\Workflows\WorkflowContext;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use PHPUnit\Framework\TestCase;
-use Title;
 use TitleFactory;
 use User;
 
