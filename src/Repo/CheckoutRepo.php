@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\PageCheckout\Repo;
 
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MWException;
-use User;
 use Wikimedia\Rdbms\DBError;
 use Wikimedia\Rdbms\ILoadBalancer;
 

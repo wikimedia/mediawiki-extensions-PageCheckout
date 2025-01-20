@@ -8,9 +8,9 @@ use MediaWiki\Extension\PageCheckout\Entity\CheckoutEvent;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutEventRepo;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
 use MWException;
-use User;
 
 class CheckoutManager {
 	/** @var User */

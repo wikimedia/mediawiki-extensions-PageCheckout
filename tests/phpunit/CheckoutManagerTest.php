@@ -8,9 +8,9 @@ use MediaWiki\Extension\PageCheckout\Repo\CheckoutEventRepo;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Extension\PageCheckout\SpecialLogLogger;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use User;
 
 /**
  * @covers \MediaWiki\Extension\PageCheckout\CheckoutManager
@@ -38,7 +38,7 @@ class CheckoutManagerTest extends TestCase {
 		$this->checkoutRepoMock = $this->createMock( CheckoutRepo::class );
 		$this->eventRepoMock = $this->createMock( CheckoutEventRepo::class );
 
-		$this->user = $this->createMock( \User::class );
+		$this->user = $this->createMock( User::class );
 		$this->user->method( 'getId' )->willReturn( 100 );
 		$this->user->method( 'getName' )->willReturn( 'Test' );
 		$this->user->method( 'isRegistered' )->willReturn( true );

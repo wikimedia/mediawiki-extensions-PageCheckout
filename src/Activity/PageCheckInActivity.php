@@ -3,8 +3,8 @@
 namespace MediaWiki\Extension\PageCheckout\Activity;
 
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MWException;
-use User;
 
 class PageCheckInActivity extends CheckoutActivity {
 	/**
