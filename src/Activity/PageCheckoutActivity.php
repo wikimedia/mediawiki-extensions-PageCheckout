@@ -5,9 +5,9 @@ namespace MediaWiki\Extension\PageCheckout\Activity;
 use MediaWiki\Extension\Workflows\Activity\ExecutionStatus;
 use MediaWiki\Extension\Workflows\WorkflowContext;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
 use MWException;
-use User;
 
 class PageCheckoutActivity extends CheckoutActivity {
 	/** @var bool */

@@ -5,8 +5,8 @@ namespace MediaWiki\Extension\PageCheckout\Hook;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use Message;
-use User;
 
 class ApplyCheckout implements GetUserPermissionsErrorsHook {
 	/** @var string[] Permissions to lock */

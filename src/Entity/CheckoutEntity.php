@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\PageCheckout\Entity;
 
 use JsonSerializable;
 use MediaWiki\Title\Title;
-use User;
+use MediaWiki\User\User;
 
 class CheckoutEntity implements JsonSerializable {
 	/** @var int */

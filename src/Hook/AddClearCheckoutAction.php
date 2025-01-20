@@ -9,9 +9,9 @@ use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use OutputPage;
 use Skin;
-use User;
 
 class AddClearCheckoutAction implements
 	SkinTemplateNavigation__UniversalHook,
