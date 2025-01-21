@@ -9,10 +9,10 @@ use MediaWiki\Extension\Workflows\Definition\Element\Task;
 use MediaWiki\Extension\Workflows\Exception\WorkflowExecutionException;
 use MediaWiki\Extension\Workflows\WorkflowContext;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use PHPUnit\Framework\TestCase;
-use TitleFactory;
 
 /**
  * @group Broken

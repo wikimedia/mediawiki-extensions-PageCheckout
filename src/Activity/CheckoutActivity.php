@@ -10,9 +10,9 @@ use MediaWiki\Extension\Workflows\Definition\ITask;
 use MediaWiki\Extension\Workflows\Exception\WorkflowExecutionException;
 use MediaWiki\Extension\Workflows\WorkflowContext;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
-use TitleFactory;
 
 abstract class CheckoutActivity extends GenericActivity {
 	/** @var CheckoutManager */
