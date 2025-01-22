@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\PageCheckout\Activity;
 
 use MediaWiki\Extension\Workflows\Activity\ExecutionStatus;
 use MediaWiki\Extension\Workflows\WorkflowContext;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
 use MWException;
 
 class PageCheckoutActivity extends CheckoutActivity {
