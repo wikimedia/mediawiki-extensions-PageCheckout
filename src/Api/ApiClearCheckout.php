@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\PageCheckout\Api;
 
-use ApiMain;
 use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiMain;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Status\Status;
