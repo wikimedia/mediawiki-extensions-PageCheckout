@@ -7,10 +7,10 @@ namespace MediaWiki\Extension\PageCheckout\Hook;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use OutputPage;
 use Skin;
 
 class AddClearCheckoutAction implements
