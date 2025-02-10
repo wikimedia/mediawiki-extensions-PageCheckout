@@ -12,14 +12,12 @@ use MWException;
 class PageCheckoutActivity extends CheckoutActivity {
 	/** @var bool */
 	private $force;
-	/** @var string */
-	private $genericUsername = 'Mediawiki default';
 
 	/**
 	 * @inheritDoc
 	 */
 	public function execute( $data, WorkflowContext $context ): ExecutionStatus {
-		$this->force = isset( $data['force'] ) ? (bool)$data['force'] : false;
+		$this->force = isset( $data['force'] ) && $data['force'];
 		return parent::execute( $data, $context );
 	}
 
@@ -35,7 +33,7 @@ class PageCheckoutActivity extends CheckoutActivity {
 		$payload = [
 			'workflowId' => $this->workflowContext->getWorkflowId()->toString(),
 		];
-		if ( $user->getName() === $this->genericUsername ) {
+		if ( $user->isSystemUser() ) {
 			$payload['alertText'] = Message::newFromKey(
 				'page-checkout-workflow-activity-checkout-reason'
 			)->text();
