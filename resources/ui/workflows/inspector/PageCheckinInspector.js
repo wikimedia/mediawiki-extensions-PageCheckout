@@ -20,14 +20,14 @@ pagecheckout.ui.workflows.inspector.PageCheckinInspector.prototype.getItems = fu
 			title: mw.message( 'workflows-ui-editor-inspector-properties' ).text()
 		},
 		{
-			type: 'user_picker',
+			type: 'text',
 			name: 'properties.user',
 			label: mw.message( 'pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user' ).text(),
 			help: mw.message( 'pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help' ).text(),
 			required: true
 		},
 		{
-			type: 'title',
+			type: 'text',
 			name: 'properties.pagename',
 			label: mw.message( 'pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename' ).text(),
 			help: mw.message( 'pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help' ).text()
