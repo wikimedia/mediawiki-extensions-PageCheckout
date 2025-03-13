@@ -3,18 +3,18 @@ window.pagecheckout.ui = pagecheckout.ui || {};
 window.pagecheckout.ui.workflows = pagecheckout.ui.workflows || {};
 window.pagecheckout.ui.workflows.inspector = pagecheckout.ui.workflows.inspector || {};
 
-pagecheckout.ui.workflows.inspector.PageCheckoutInspector = function( element, dialog ) {
+pagecheckout.ui.workflows.inspector.PageCheckoutInspector = function ( element, dialog ) {
 	pagecheckout.ui.workflows.inspector.PageCheckoutInspector.parent.call( this, element, dialog );
 };
 
 OO.inheritClass( pagecheckout.ui.workflows.inspector.PageCheckoutInspector, workflows.editor.inspector.ActivityInspector );
 
-pagecheckout.ui.workflows.inspector.PageCheckoutInspector.prototype.getDialogTitle = function() {
+pagecheckout.ui.workflows.inspector.PageCheckoutInspector.prototype.getDialogTitle = function () {
 	return mw.message( 'pagecheckout-ui-workflows-inspector-activity-page-checkout-title' ).text();
 };
 
-pagecheckout.ui.workflows.inspector.PageCheckoutInspector.prototype.getItems = function() {
-	return  [
+pagecheckout.ui.workflows.inspector.PageCheckoutInspector.prototype.getItems = function () {
+	return [
 		{
 			type: 'section_label',
 			title: mw.message( 'workflows-ui-editor-inspector-properties' ).text()
