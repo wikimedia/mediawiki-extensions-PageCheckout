@@ -14,7 +14,7 @@
 		"BlueSpiceFoundation": {
 			"PermissionRegistry": {
 				"page-checkout-clear": {
-					"global": true,
+					"type": "global",
 					"roles": [ "admin" ]
 				}
 			}
