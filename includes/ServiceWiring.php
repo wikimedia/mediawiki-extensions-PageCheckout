@@ -9,9 +9,8 @@ use MediaWiki\Extension\PageCheckout\SpecialLogLogger;
 return [
 	'PageCheckoutManager' => static function ( \MediaWiki\MediaWikiServices $services ) {
 		return new CheckoutManager(
-			// No likey :(
 			RequestContext::getMain()->getUser(),
-			new CheckoutRepo( $services->getDBLoadBalancer() ),
+			new CheckoutRepo( $services->getConnectionProvider(), $services->getObjectCacheFactory() ),
 			new CheckoutEventRepo( $services->getDBLoadBalancer() ),
 			new SpecialLogLogger()
 		);

@@ -6,19 +6,25 @@ use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MWException;
+use ObjectCacheFactory;
 use Wikimedia\Rdbms\DBError;
-use Wikimedia\Rdbms\ILoadBalancer;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class CheckoutRepo {
-	/** @var ILoadBalancer */
-	private $loadBalancer;
+
+	/** @var IConnectionProvider */
+	private $connectionProvider;
+
+	/** @var ObjectCacheFactory */
+	private $objectCacheFactory;
 
 	/**
-	 * @param ILoadBalancer $loadBalancer
-	 *
+	 * @param IConnectionProvider $connectionProvider
+	 * @param ObjectCacheFactory $objectCacheFactory
 	 */
-	public function __construct( ILoadBalancer $loadBalancer ) {
-		$this->loadBalancer = $loadBalancer;
+	public function __construct( IConnectionProvider $connectionProvider, ObjectCacheFactory $objectCacheFactory ) {
+		$this->connectionProvider = $connectionProvider;
+		$this->objectCacheFactory = $objectCacheFactory;
 	}
 
 	/**
@@ -58,7 +64,7 @@ class CheckoutRepo {
 	 * @return CheckoutEntity
 	 */
 	public function save( CheckoutEntity $entity ): CheckoutEntity {
-		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
+		$dbw = $this->connectionProvider->getPrimaryDatabase();
 
 		$data = [
 			'pcl_page_id' => $entity->getTitle()->getArticleID(),
@@ -66,22 +72,22 @@ class CheckoutRepo {
 			'pcl_payload' => json_encode( $entity->getPayload() ),
 		];
 
-		$res = $db->insert(
+		$res = $dbw->insert(
 			'page_checkout_locks',
 			$data,
 			__METHOD__
 		);
 		if ( $res ) {
-			$id = $db->insertId();
+			$id = $dbw->insertId();
 		}
 
 		if ( !$res ) {
-			throw new DBError( $db, 'pagecheckout-error-db-insert' );
+			throw new DBError( $dbw, 'pagecheckout-error-db-insert' );
 		}
 
 		$inserted = $this->get( [ 'pcl_id' => $id ] );
 		if ( empty( $inserted ) ) {
-			throw new DBError( $db, 'pagecheckout-error-db-retrieve-inserted' );
+			throw new DBError( $dbw, 'pagecheckout-error-db-retrieve-inserted' );
 		}
 
 		return array_shift( $inserted );
@@ -97,8 +103,8 @@ class CheckoutRepo {
 			throw new MWException( 'pagecheckout-error-no-checkout-id' );
 		}
 
-		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
-		return $db->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
+		$dbw = $this->connectionProvider->getPrimaryDatabase();
+		return $dbw->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
 	}
 
 	/**
@@ -106,31 +112,51 @@ class CheckoutRepo {
 	 * @return array
 	 */
 	private function get( $conds = [] ) {
-		$db = $this->loadBalancer->getConnection( DB_REPLICA );
 		$conds = array_merge( $conds, [
 			'pcl_page_id = page_id',
 			'pcl_user_id = user_id'
 		] );
 
-		$res = $db->select(
-			[ 'pcl' => 'page_checkout_locks', 'p' => 'page', 'u' => 'user' ],
-			[ 'pcl.*', 'p.page_id', 'p.page_title', 'p.page_namespace', 'u.*' ],
-			$conds,
-			__METHOD__
+		$objectCache = $this->objectCacheFactory->getLocalServerInstance();
+		$fname = __METHOD__;
+
+		return $objectCache->getWithSetCallback(
+			$objectCache->makeKey( 'pagecheckout-get', json_encode( $conds ) ),
+			$objectCache::TTL_PROC_SHORT,
+			function () use ( $conds, $fname ) {
+				$dbr = $this->connectionProvider->getReplicaDatabase();
+
+				$res = $dbr->newSelectQueryBuilder()
+					->tables( [
+						'page_checkout_locks',
+						'page',
+						'user'
+					] )
+					->fields( [
+						'page_checkout_locks.pcl_id',
+						'page_checkout_locks.pcl_payload',
+						'page.page_namespace',
+						'page.page_title',
+						'user.user_id'
+					] )
+					->where( $conds )
+					->caller( $fname )
+					->fetchResultSet();
+
+				$entities = [];
+				foreach ( $res as $row ) {
+					$title = Title::newFromRow( $row );
+					$user = User::newFromRow( $row );
+					$entities[] = new CheckoutEntity(
+						$row->pcl_id,
+						$title,
+						$user,
+						json_decode( $row->pcl_payload, 1 ) ?? []
+					);
+				}
+
+				return $entities;
+			}
 		);
-
-		$entities = [];
-		foreach ( $res as $row ) {
-			$title = Title::newFromRow( $row );
-			$user = User::newFromRow( $row );
-			$entities[] = new CheckoutEntity(
-				$row->pcl_id,
-				$title,
-				$user,
-				json_decode( $row->pcl_payload, 1 ) ?? []
-			);
-		}
-
-		return $entities;
 	}
 }
