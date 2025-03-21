@@ -133,11 +133,11 @@ class CheckoutRepo {
 						'user'
 					] )
 					->fields( [
-						'page_checkout_locks.pcl_id',
-						'page_checkout_locks.pcl_payload',
-						'page.page_namespace',
-						'page.page_title',
-						'user.user_id'
+						'pcl_id',
+						'pcl_payload',
+						'page_namespace',
+						'page_title',
+						'user_id'
 					] )
 					->where( $conds )
 					->caller( $fname )
