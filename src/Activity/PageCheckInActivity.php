@@ -13,6 +13,9 @@ class PageCheckInActivity extends CheckoutActivity {
 	 * @throws MWException
 	 */
 	protected function doAction( User $user, Title $title ) {
-		$this->manager->checkIn( $title, $user );
+		if ( !$this->manager->isCheckedOut( $title ) ) {
+			return;
+		}
+		$this->manager->checkIn( $title );
 	}
 }
