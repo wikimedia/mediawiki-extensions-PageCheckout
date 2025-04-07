@@ -35,15 +35,23 @@ class CheckoutRepo {
 		if ( !$title->exists() ) {
 			return null;
 		}
-		$entities = $this->get( [
-			'pcl_page_id' => $title->getArticleID()
-		] );
+		$oc = $this->objectCacheFactory->getLocalServerInstance();
+		$cacheKey = $oc->makeKey( 'pagecheckout-page', $title->getArticleID() );
+		return $oc->getWithSetCallback(
+			$cacheKey,
+			$oc::TTL_PROC_SHORT,
+			function () use ( $title ) {
+				$entities = $this->get( [
+					'pcl_page_id' => $title->getArticleID()
+				] );
 
-		if ( !empty( $entities ) ) {
-			return $entities[0];
-		}
+				if ( !empty( $entities ) ) {
+					return $entities[0];
+				}
 
-		return null;
+				return null;
+			}
+		);
 	}
 
 	/**
@@ -54,9 +62,16 @@ class CheckoutRepo {
 		if ( !$user->isRegistered() ) {
 			return [];
 		}
-		return $this->get( [
-			'pcl_user_id' => $user->getId()
-		] );
+		$oc = $this->objectCacheFactory->getLocalServerInstance();
+		return $oc->getWithSetCallback(
+			$oc->makeKey( 'pagecheckout-user-checkouts-', $user->getId() ),
+			$oc::TTL_PROC_SHORT,
+			function () use ( $user ) {
+				return $this->get( [
+					'pcl_user_id' => $user->getId()
+				] );
+			}
+		);
 	}
 
 	/**
@@ -90,7 +105,11 @@ class CheckoutRepo {
 			throw new DBError( $dbw, 'pagecheckout-error-db-retrieve-inserted' );
 		}
 
-		return array_shift( $inserted );
+		$entityToReturn = array_shift( $inserted );
+		if ( $entityToReturn instanceof CheckoutEntity ) {
+			$this->invalidateCacheForEntity( $entityToReturn );
+		}
+		return $entityToReturn;
 	}
 
 	/**
@@ -102,9 +121,23 @@ class CheckoutRepo {
 		if ( !$entity->getId() ) {
 			throw new MWException( 'pagecheckout-error-no-checkout-id' );
 		}
-
 		$dbw = $this->connectionProvider->getPrimaryDatabase();
-		return $dbw->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
+		$res = $dbw->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
+		$this->invalidateCacheForEntity( $entity );
+
+		return $res;
+	}
+
+	/**
+	 * @param CheckoutEntity $entity
+	 * @return void
+	 */
+	private function invalidateCacheForEntity( CheckoutEntity $entity ) {
+		$oc = $this->objectCacheFactory->getLocalServerInstance();
+		$userCC = $oc->makeKey( 'pagecheckout-user-checkouts-', $entity->getUser()->getId() );
+		$oc->delete( $userCC );
+		$pageCC = $oc->makeKey( 'pagecheckout-page', $entity->getTitle()->getArticleID() );
+		$oc->delete( $pageCC );
 	}
 
 	/**
@@ -117,46 +150,37 @@ class CheckoutRepo {
 			'pcl_user_id = user_id'
 		] );
 
-		$objectCache = $this->objectCacheFactory->getLocalServerInstance();
-		$fname = __METHOD__;
+		$dbr = $this->connectionProvider->getReplicaDatabase();
 
-		return $objectCache->getWithSetCallback(
-			$objectCache->makeKey( 'pagecheckout-get', json_encode( $conds ) ),
-			$objectCache::TTL_PROC_SHORT,
-			function () use ( $conds, $fname ) {
-				$dbr = $this->connectionProvider->getReplicaDatabase();
+		$res = $dbr->newSelectQueryBuilder()
+			->tables( [
+				'page_checkout_locks',
+				'page',
+				'user'
+			] )
+			->fields( [
+				'pcl_id',
+				'pcl_payload',
+				'page_namespace',
+				'page_title',
+				'user_id'
+			] )
+			->where( $conds )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
-				$res = $dbr->newSelectQueryBuilder()
-					->tables( [
-						'page_checkout_locks',
-						'page',
-						'user'
-					] )
-					->fields( [
-						'pcl_id',
-						'pcl_payload',
-						'page_namespace',
-						'page_title',
-						'user_id'
-					] )
-					->where( $conds )
-					->caller( $fname )
-					->fetchResultSet();
+		$entities = [];
+		foreach ( $res as $row ) {
+			$title = Title::newFromRow( $row );
+			$user = User::newFromRow( $row );
+			$entities[] = new CheckoutEntity(
+				$row->pcl_id,
+				$title,
+				$user,
+				json_decode( $row->pcl_payload, 1 ) ?? []
+			);
+		}
 
-				$entities = [];
-				foreach ( $res as $row ) {
-					$title = Title::newFromRow( $row );
-					$user = User::newFromRow( $row );
-					$entities[] = new CheckoutEntity(
-						$row->pcl_id,
-						$title,
-						$user,
-						json_decode( $row->pcl_payload, 1 ) ?? []
-					);
-				}
-
-				return $entities;
-			}
-		);
+		return $entities;
 	}
 }
