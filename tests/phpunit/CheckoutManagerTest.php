@@ -51,7 +51,6 @@ class CheckoutManagerTest extends TestCase {
 
 	/**
 	 * @covers \MediaWiki\Extension\PageCheckout\CheckoutManager::checkout
-	 * @throws \MWException
 	 */
 	public function testCheckout() {
 		$this->eventRepoMock->method( 'save' )->willReturn( true );
@@ -64,7 +63,6 @@ class CheckoutManagerTest extends TestCase {
 
 	/**
 	 * @covers \MediaWiki\Extension\PageCheckout\CheckoutManager::checkIn
-	 * @throws \MWException
 	 */
 	public function testCheckin() {
 		$this->checkoutRepoMock->method( 'getForPage' )->willReturn(
@@ -77,7 +75,6 @@ class CheckoutManagerTest extends TestCase {
 
 	/**
 	 * @covers \MediaWiki\Extension\PageCheckout\CheckoutManager::clearCheckout
-	 * @throws \MWException
 	 */
 	public function testClearCheckout() {
 		$this->checkoutRepoMock->method( 'getForPage' )->willReturn(
