@@ -7,7 +7,6 @@ use MediaWiki\Extension\Workflows\WorkflowContext;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use MWException;
 
 class PageCheckoutActivity extends CheckoutActivity {
 	/** @var bool */
@@ -24,7 +23,6 @@ class PageCheckoutActivity extends CheckoutActivity {
 	/**
 	 * @param User $user
 	 * @param Title $title
-	 * @throws MWException
 	 */
 	protected function doAction( User $user, Title $title ) {
 		if ( $this->force && $this->manager->isCheckedOut( $title ) ) {
