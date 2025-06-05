@@ -10,7 +10,6 @@ use MediaWiki\Extension\Workflows\Storage\Event\WorkflowAborted;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message as MediaWikiMessage;
 use MediaWiki\Title\Title;
-use MWException;
 
 class ClearCheckoutOnAbort implements Consumer {
 	/** @var CheckoutManager */
@@ -25,7 +24,6 @@ class ClearCheckoutOnAbort implements Consumer {
 
 	/**
 	 * @param Message $message
-	 * @throws MWException
 	 */
 	public function handle( Message $message ) {
 		$event = $message->event();

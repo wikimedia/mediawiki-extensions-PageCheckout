@@ -12,7 +12,6 @@ class SpecialLogLogger {
 	 * @param User $actor
 	 * @param string $action
 	 * @param string $comment
-	 * @throws \MWException
 	 */
 	public function log( CheckoutEntity $entity, User $actor, $action, $comment ) {
 		$logEntry = new ManualLogEntry( 'pagecheckout', $action );
