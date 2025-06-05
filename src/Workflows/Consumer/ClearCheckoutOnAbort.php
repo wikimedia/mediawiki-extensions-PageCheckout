@@ -7,7 +7,6 @@ use EventSauce\EventSourcing\Message;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\Workflows\Storage\AggregateRoot\Id\WorkflowId;
 use MediaWiki\Extension\Workflows\Storage\Event\WorkflowAborted;
-use MediaWiki\Extension\Workflows\WorkflowFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message as MediaWikiMessage;
 use MediaWiki\Title\Title;
