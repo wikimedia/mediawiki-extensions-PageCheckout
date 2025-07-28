@@ -38,9 +38,9 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Usator",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Nomine del pagina",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Si non es specificate, le pagina de contexto del fluxo de travalio essera usate",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Activitate de ''check-out'' de paginas",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Activitate “Reservar pagina”",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "Pro qui essera facite le ''check-out'' del pagina",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force-help": "Si es ver, removera omne ''check-out'' existente (pro altere usatores) e creara un nove ''check-out''",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Activitate de ''check-in'' de paginas",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Activitate “Liberar pagina”",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "Pro qui essera facite le ''check-out'' del pagina"
 }
