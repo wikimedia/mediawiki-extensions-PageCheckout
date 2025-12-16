@@ -9,6 +9,8 @@ use MediaWiki\User\User;
 use ObjectCacheFactory;
 use Wikimedia\Rdbms\DBError;
 use Wikimedia\Rdbms\IConnectionProvider;
+use Wikimedia\Rdbms\IDatabase;
+use Wikimedia\Rdbms\IReadableDatabase;
 
 class CheckoutRepo {
 
@@ -17,10 +19,13 @@ class CheckoutRepo {
 
 	/** @var ObjectCacheFactory */
 	private $objectCacheFactory;
+	/** @var IDatabase|null */
+	private IDatabase|IReadableDatabase $db;
 
 	public function __construct( IConnectionProvider $connectionProvider, ObjectCacheFactory $objectCacheFactory ) {
 		$this->connectionProvider = $connectionProvider;
 		$this->objectCacheFactory = $objectCacheFactory;
+		$this->db = $this->connectionProvider->getReplicaDatabase();
 	}
 
 	public function getForPage( Title $title ): ?CheckoutEntity {
@@ -68,7 +73,7 @@ class CheckoutRepo {
 	 * @throws DBError
 	 */
 	public function save( CheckoutEntity $entity ): CheckoutEntity {
-		$dbw = $this->connectionProvider->getPrimaryDatabase();
+		$this->db = $this->connectionProvider->getPrimaryDatabase();
 
 		$data = [
 			'pcl_page_id' => $entity->getTitle()->getArticleID(),
@@ -76,22 +81,22 @@ class CheckoutRepo {
 			'pcl_payload' => json_encode( $entity->getPayload() ),
 		];
 
-		$res = $dbw->insert(
+		$res = $this->db->insert(
 			'page_checkout_locks',
 			$data,
 			__METHOD__
 		);
 		if ( $res ) {
-			$id = $dbw->insertId();
+			$id = $this->db->insertId();
 		}
 
 		if ( !$res ) {
-			throw new DBError( $dbw, 'pagecheckout-error-db-insert' );
+			throw new DBError( $this->db, 'pagecheckout-error-db-insert' );
 		}
 
 		$inserted = $this->get( [ 'pcl_id' => $id ] );
 		if ( empty( $inserted ) ) {
-			throw new DBError( $dbw, 'pagecheckout-error-db-retrieve-inserted' );
+			throw new DBError( $this->db, 'pagecheckout-error-db-retrieve-inserted' );
 		}
 
 		$entityToReturn = array_shift( $inserted );
@@ -110,8 +115,8 @@ class CheckoutRepo {
 		if ( !$entity->getId() ) {
 			throw new InvalidArgumentException( 'pagecheckout-error-no-checkout-id' );
 		}
-		$dbw = $this->connectionProvider->getPrimaryDatabase();
-		$res = $dbw->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
+		$this->db = $this->connectionProvider->getPrimaryDatabase();
+		$res = $this->db->delete( 'page_checkout_locks', [ 'pcl_id' => $entity->getId() ], __METHOD__ );
 		$this->invalidateCacheForEntity( $entity );
 
 		return $res;
@@ -139,9 +144,7 @@ class CheckoutRepo {
 			'pcl_user_id = user_id'
 		] );
 
-		$dbr = $this->connectionProvider->getReplicaDatabase();
-
-		$res = $dbr->newSelectQueryBuilder()
+		$res = $this->db->newSelectQueryBuilder()
 			->tables( [
 				'page_checkout_locks',
 				'page',
