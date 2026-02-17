@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alshamiri1"
+			"Alshamiri1",
+			"Meno25"
 		]
 	},
 	"pagecheckout-desc": "يسمح بحقوق حصرية على الصفحة للمستخدم",
@@ -14,5 +15,33 @@
 	"pagecheckout-error-db-insert": "فشل في إدراج السحب",
 	"pagecheckout-error-db-retrieve-inserted": "فشل في استرداد الخروج المدرج مسبقًا",
 	"pagecheckout-error-save-event": "فشل حفظ الحدث",
-	"pagecheckout-lockdown-reason": "الإجراء \" $1 \" غير مسموح به ، لأنه تم سحب الصفحة بواسطة $2"
+	"pagecheckout-lockdown-reason": "الإجراء \" $1 \" غير مسموح به ، لأنه تم سحب الصفحة بواسطة $2",
+	"pagecheckout-action-clear-label": "إتمام عملية الدفع",
+	"apihelp-pagecheckout-clear-example": "مسح بيانات الدفع للصفحة الرئيسية",
+	"apihelp-pagecheckout-clear-summary": "مسح صفحة النشاط عند إتمام عملية الدفع",
+	"apihelp-pagecheckout-clear-param-page_title": "عنوان الصفحة التي سيتم مسح عمليات الدفع منها",
+	"pagecheckout-ui-clear-confirm": "هل تريد تأكيد إلغاء عملية الدفع النشطة في هذه الصفحة؟ سيؤدي ذلك إلى جعل الصفحة قابلة للتعديل لجميع المستخدمين المؤهلين عادةً.",
+	"log-name-pagecheckout": "عمليات تسجيل الخروج من الصفحة",
+	"log-description-pagecheckout": "يتتبع حالة عمليات تسجيل الخروج وتسجيل الدخول للصفحات",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|تم تسجيل الوصول إليها}} الصفحة $3 التي تم تسجيل خروجها للمستخدم $4",
+	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|تم تسجيل الخروج}} الصفحة $3 للمستخدم $4",
+	"pagecheckout-alertbanner-checkout": "هذه الصفحة {{GENDER:$1|مُستخدَمة}} حاليًا مقابل $2",
+	"action-page-checkout-clear": "مسح صفحة إتمام عملية الشراء",
+	"right-page-checkout-clear": "مسح صفحة إتمام عملية الشراء",
+	"pagecheckout-alertbanner-checkout-with-comment": "هذه الصفحة {{GENDER:$1|مُستخدَمة}} حاليًا مقابل $2 التعليق: $3",
+	"page-checkout-workflow-activity-checkout-reason": "هذه الصفحة قيد التشغيل حاليًا بسبب سير عمل جارٍ",
+	"page-checkout-workflow-activity-checkout-non-generic-reason": "تم التحقق منه أثناء تنفيذ سير العمل",
+	"page-checkout-workflow-clear-checkout": "تمت الموافقة على عملية الدفع بسبب تعطل سير العمل",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "نشاط \"تسجيل الخروج من الصفحة\"",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "مستخدم",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "لمن سيتم التحقق من الصفحة",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename": "اسم الصفحة",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename-help": "في حال عدم التحديد، سيتم استخدام صفحة سياق سير العمل",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force": "قوة؟",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-force-help": "في حال صحة ذلك، سيتم حذف أي عملية دفع موجودة (للمستخدمين الآخرين) وإنشاء عملية دفع جديدة.",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "نشاط \"تسجيل الوصول إلى الصفحة\"",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "مستخدم",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "لمن سيتم التحقق من الصفحة",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "اسم الصفحة",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "في حال عدم التحديد، سيتم استخدام صفحة سياق سير العمل"
 }
