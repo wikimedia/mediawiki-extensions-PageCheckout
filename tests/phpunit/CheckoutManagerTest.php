@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\PageCheckout\Tests;
 
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
+use MediaWiki\Extension\PageCheckout\PluginManager;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutEventRepo;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Extension\PageCheckout\SpecialLogLogger;
@@ -44,8 +45,9 @@ class CheckoutManagerTest extends TestCase {
 		$this->user->method( 'isRegistered' )->willReturn( true );
 
 		$specialLogLoggerMock = $this->createMock( SpecialLogLogger::class );
+		$pluginManagerMock = $this->createMock( PluginManager::class );
 		$this->manager = new CheckoutManager(
-			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock
+			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock, $pluginManagerMock
 		);
 	}
 

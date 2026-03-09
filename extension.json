@@ -19,6 +19,9 @@
 				}
 			}
 		},
+		"VisualEditor": {
+			"PluginModules": [ "ext.pagecheckout.ve.checkout" ]
+		},
 		"Workflows": {
 			"LogicObjects": {
 				"ActivityRegistry": {
@@ -47,6 +50,9 @@
 			"EditorPluginModules": [
 				"ext.pagecheckout.workflows.editor.customElements"
 			]
+		},
+		"PageCheckout": {
+			"Plugins": {}
 		}
 	},
 	"MessagesDirs": {
@@ -67,18 +73,6 @@
 		}
 	},
 	"ResourceModules": {
-		"ext.pagecheckout.clear": {
-			"scripts": [
-				"clearAction.js"
-			],
-			"messages": [
-				"pagecheckout-ui-clear-confirm"
-			],
-			"dependencies": [
-				"mediawiki.api",
-				"oojs-ui-windows"
-			]
-		},
 		"ext.pagecheckout.workflows.editor.customElements": {
 			"scripts": [
 				"ui/workflows/inspector/PageCheckinInspector.js",
@@ -106,6 +100,58 @@
 				"ext.workflows.editor.inspector.bootstrap",
 				"ext.workflows.editor.customElements.bootstrap"
 			]
+		},
+		"ext.pagecheckout.contentActions": {
+			"scripts": [
+				"contentActions.js"
+			],
+			"messages": [
+				"pagecheckout-ui-clear-confirm",
+				"pagecheckout-ui-checkout-confirm"
+			],
+			"dependencies": [
+				"oojs-ui",
+				"ext.pagecheckout.boostrap"
+			]
+		},
+		"ext.pagecheckout.checkinDialog": {
+			"packageFiles": [
+				"ui/CheckinDialog.js"
+			],
+			"messages": [
+				"pagecheckout-ui-cancel-button",
+				"pagecheckout-ui-checkin-confirm",
+				"pagecheckout-action-checkin-label",
+				"pagecheckout-ui-checkin-comment-label"
+			],
+			"dependencies": [
+				"oojs-ui",
+				"ext.pagecheckout.boostrap",
+				"ext.forms.standalone"
+			]
+		},
+		"ext.pagecheckout.boostrap": {
+			"scripts": [
+				"bootstrap.js"
+			]
+		},
+		"ext.pagecheckout.ve.checkout": {
+			"packageFiles": [
+				"ve.checkout.js",
+				{
+					"name": "config.json",
+					"callback": "MediaWiki\\Extension\\PageCheckout\\ClientConfig::getVEPluginConfig"
+				}
+			],
+			"messages": [
+				"pagecheckout-ui-checkout-prompt-ve",
+				"pagecheckout-ui-cancel-button",
+				"pagecheckout-action-checkout-label",
+				"pagecheckout-error-save-failed"
+			],
+			"dependencies": [
+				"ext.pagecheckout.boostrap"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -115,10 +161,10 @@
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "addDatabaseTables",
 		"getUserPermissionsErrors": "applyCheckout",
-		"SkinTemplateNavigation::Universal": "addClearCheckoutAction",
-		"BeforePageDisplay": "addClearCheckoutAction",
+		"SkinTemplateNavigation::Universal": "addContentActions",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"MWStakeAlertBannersRegisterProviders": "addAlertBanner"
+		"MWStakeAlertBannersRegisterProviders": "addAlertBanner",
+		"GetPreferences": "addPreferences"
 	},
 	"HookHandlers": {
 		"addDatabaseTables": {
@@ -130,8 +176,8 @@
 				"PageCheckoutManager"
 			]
 		},
-		"addClearCheckoutAction": {
-			"class": "MediaWiki\\Extension\\PageCheckout\\Hook\\AddClearCheckoutAction",
+		"addContentActions": {
+			"class": "MediaWiki\\Extension\\PageCheckout\\Hook\\AddContentActions",
 			"services": [
 				"PermissionManager",
 				"PageCheckoutManager"
@@ -142,6 +188,13 @@
 		},
 		"discovery-skin": {
 			"class": "\\MediaWiki\\Extension\\PageCheckout\\HookHandler\\DiscoverySkin"
+		},
+		"addPreferences": {
+			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\AddUserPreferences",
+			"services": [
+				"UserOptionsLookup",
+				"MainConfig"
+			]
 		}
 	},
 	"GroupPermissions": {
@@ -162,5 +215,43 @@
 	"LogActionsHandlers": {
 		"pagecheckout/*": "LogFormatter"
 	},
+	"config": {
+		"PageCheckoutPromptToCheckoutOnEdit": {
+			"value": true,
+			"description": "If true, users will be prompted to checkout a page when they attempt to edit it without having it checked out."
+		}
+	},
+	"RestRoutes": [
+		{
+			"path": "/pagecheckout/clear",
+			"method": "POST",
+			"class": "MediaWiki\\Extension\\PageCheckout\\Rest\\ClearCheckoutHandler",
+			"services": [ "PageCheckoutManager", "PermissionManager", "TitleFactory" ]
+		},
+		{
+			"path": "/pagecheckout/checkout",
+			"method": "POST",
+			"class": "MediaWiki\\Extension\\PageCheckout\\Rest\\CheckoutHandler",
+			"services": [ "PageCheckoutManager", "PermissionManager", "TitleFactory" ]
+		},
+		{
+			"path": "/pagecheckout/checkin",
+			"method": "POST",
+			"class": "MediaWiki\\Extension\\PageCheckout\\Rest\\CheckinHandler",
+			"services": [ "PageCheckoutManager", "TitleFactory" ]
+		},
+		{
+			"path": "/pagecheckout/plugins/{pageId}",
+			"method": "GET",
+			"class": "MediaWiki\\Extension\\PageCheckout\\Rest\\PluginHandler",
+			"services": [ "PageCheckout.PluginManager", "TitleFactory" ]
+		},
+		{
+			"path": "/pagecheckout/has_checkout/{pageId}",
+			"method": "GET",
+			"class": "MediaWiki\\Extension\\PageCheckout\\Rest\\HasCheckoutHandler",
+			"services": [ "PageCheckoutManager", "TitleFactory" ]
+		}
+	],
 	"manifest_version": 2
 }

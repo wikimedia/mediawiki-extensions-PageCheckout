@@ -24,20 +24,25 @@ class CheckoutManager {
 	private $checkouts = [];
 	/** @var SpecialLogLogger */
 	private $specialLogLogger;
+	/** @var PluginManager */
+	private $pluginManager;
 
 	/**
 	 * @param User $actor
 	 * @param CheckoutRepo $checkoutRepo
 	 * @param CheckoutEventRepo $eventRepo
 	 * @param SpecialLogLogger $logger
+	 * @param PluginManager $pluginManager
 	 */
 	public function __construct(
-		User $actor, CheckoutRepo $checkoutRepo, CheckoutEventRepo $eventRepo, SpecialLogLogger $logger
+		User $actor, CheckoutRepo $checkoutRepo, CheckoutEventRepo $eventRepo,
+		SpecialLogLogger $logger, PluginManager $pluginManager
 	) {
 		$this->actor = $actor;
 		$this->checkoutRepo = $checkoutRepo;
 		$this->eventRepo = $eventRepo;
 		$this->specialLogLogger = $logger;
+		$this->pluginManager = $pluginManager;
 	}
 
 	/**
@@ -63,6 +68,7 @@ class CheckoutManager {
 		if ( $entity instanceof CheckoutEntity ) {
 			$this->recordEvent( $entity, 'checkout', $payload['comment'] ?? '' );
 			$this->checkouts[$title->getArticleID()] = $entity;
+			$this->runPluginsForCheckout( $entity );
 			return $entity;
 		}
 
@@ -72,10 +78,10 @@ class CheckoutManager {
 	/**
 	 * @param Title $title
 	 * @param string $comment
+	 * @param array $pluginData
 	 * @return bool
-	 * @throws LogicException
 	 */
-	public function checkIn( Title $title, $comment = '' ) {
+	public function checkIn( Title $title, $comment = '', array $pluginData = [] ) {
 		$entity = $this->checkoutRepo->getForPage( $title );
 		if ( !$entity instanceof CheckoutEntity ) {
 			throw new LogicException( Message::newFromKey( 'pagecheckout-error-no-checkout' )->text() );
@@ -84,6 +90,7 @@ class CheckoutManager {
 		if ( $res ) {
 			$this->recordEvent( $entity, 'checkin', $comment );
 			unset( $this->checkouts[$title->getArticleID()] );
+			$this->runPluginForCheckin( $entity, $pluginData );
 			return true;
 		}
 
@@ -153,4 +160,26 @@ class CheckoutManager {
 
 		$this->specialLogLogger->log( $entity, $this->actor, $action, $comment );
 	}
+
+	/**
+	 * @param CheckoutEntity $entity
+	 * @return void
+	 */
+	private function runPluginsForCheckout( CheckoutEntity $entity ): void {
+		foreach ( $this->pluginManager->getPlugins() as $plugin ) {
+			$plugin->onCheckout( $entity );
+		}
+	}
+
+	/**
+	 * @param CheckoutEntity $entity
+	 * @param array $pluginData
+	 * @return void
+	 */
+	private function runPluginForCheckin( CheckoutEntity $entity, array $pluginData ): void {
+		foreach ( $this->pluginManager->getPlugins() as $key => $plugin ) {
+			$plugin->onCheckin( $entity, $pluginData[$key] ?? [] );
+		}
+	}
+
 }
