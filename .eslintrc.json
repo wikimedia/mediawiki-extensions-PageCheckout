@@ -5,12 +5,19 @@
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs",
+		"ecmaVersion": "latest"
+	},
 	"globals": {
-		"pagecheckout": "readonly",
-		"workflows": "readonly"
+		"ext": "readonly",
+		"ve": "readonly",
+		"workflows": "readonly",
+		"pagecheckout": "readonly"
 	},
 	"rules": {
 		"max-len": "off",
-		"no-jquery/no-done-fail": "warn"
+		"no-jquery/no-done-fail": "warn",
+		"es-x/no-async-functions": "off"
 	}
 }

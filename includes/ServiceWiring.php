@@ -12,7 +12,12 @@ return [
 			RequestContext::getMain()->getUser(),
 			new CheckoutRepo( $services->getConnectionProvider(), $services->getObjectCacheFactory() ),
 			new CheckoutEventRepo( $services->getDBLoadBalancer() ),
-			new SpecialLogLogger()
+			new SpecialLogLogger(),
+			$services->getService( 'PageCheckout.PluginManager' )
 		);
-	}
+	},
+	'PageCheckout.PluginManager' => static function ( \MediaWiki\MediaWikiServices $services ) {
+		$attribute = ExtensionRegistry::getInstance()->getAttribute( 'PageCheckoutPlugins' );
+		return new \MediaWiki\Extension\PageCheckout\PluginManager( $attribute, $services->getObjectFactory() );
+	},
 ];

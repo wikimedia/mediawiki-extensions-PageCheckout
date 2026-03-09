@@ -10,6 +10,9 @@ use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
 
+/**
+ * @deprecated Since 3.1, use REST endpoint
+ */
 class ApiClearCheckout extends ApiBase {
 	/** @var CheckoutManager */
 	private $manager;
@@ -25,6 +28,9 @@ class ApiClearCheckout extends ApiBase {
 	}
 
 	public function execute() {
+		/** @deprecated */
+		$this->addDeprecation( 'Use the REST endpoint instead', 'action=pagecheckout-clear&page_title=Main_Page' );
+
 		$this->checkUserRightsAny( 'page-checkout-clear' );
 
 		$params = $this->extractRequestParams();
