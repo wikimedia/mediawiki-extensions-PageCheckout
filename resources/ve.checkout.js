@@ -1,4 +1,10 @@
+let initialized = false;
+
 mw.hook( 've.activationComplete' ).add( async () => {
+	if ( initialized ) {
+		return;
+	}
+	initialized = true;
 	let isEnabled = mw.user.options.get( 'pagecheckout-prompt-on-edit' );
 	if ( isEnabled === null ) {
 		isEnabled = await require( './config.json' ).checkoutPromptEnabledDefault || false;
@@ -16,7 +22,6 @@ mw.hook( 've.activationComplete' ).add( async () => {
 	} catch ( e ) {
 		return;
 	}
-
 	OO.ui.confirm(
 		mw.msg( 'pagecheckout-ui-checkout-prompt-ve' ), {
 			actions: [
