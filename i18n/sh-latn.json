@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
 	"pagecheckout-desc": "Omogućuje ekskluzivna prava na stranici za korisnika",
-	"pagecheckout-error-no-title": "Nevažeći naslov",
-	"pagecheckout-error-no-user": "Nevažeći korisnik"
+	"pagecheckout-error-no-title": "Neispravan naslov",
+	"pagecheckout-error-no-user": "Naveden je neispravan korisnik"
 }
