@@ -2,11 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
-			"Beta16"
+			"Beta16",
+			"FL2226"
 		]
 	},
 	"pagecheckout-error-no-title": "Titolo non valido",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Utente",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Utente",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Nome della pagina"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Nome della pagina",
+	"pagecheckout-action-checkin-label": "pagina di accesso",
+	"pagecheckout-action-checkout-label": "Controlla la pagina",
+	"pagecheckout-checkin-not-checked-out-by-user": "Questa pagina non è stata visualizzata da quest'utente",
+	"pagecheckout-ui-checkout-confirm": "Stai per visualizzare questa pagina. Questo impedirà ad altri utenti di modificarla finché non la riconvertirai.",
+	"pagecheckout-ui-cancel-button": "Annulla",
+	"pagecheckout-ui-checkin-confirm": "Stai per effettuare il check-in in questa pagina. Ciò consentirà ad altri utenti di modificare la pagina.",
+	"pagecheckout-ui-checkin-comment-label": "Commento",
+	"pagecheckout-ui-checkout-prompt-ve": "Vuoi visualizzare questa pagina? In questo modo impedirai ad altri utenti di modificarla finché non la riconvertirai.",
+	"pagecheckout-prompt-on-edit": "Ricevi una notifica per controllare la pagina quando inizi una modifica"
 }

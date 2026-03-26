@@ -43,5 +43,14 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "User",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "For whom page will be checked out",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Page name",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "If not specified, workflow context page will be used"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "If not specified, workflow context page will be used",
+	"pagecheckout-action-checkin-label": "Check in page",
+	"pagecheckout-action-checkout-label": "Check out page",
+	"pagecheckout-checkin-not-checked-out-by-user": "Page is not checked out by this user",
+	"pagecheckout-ui-checkout-confirm": "You are about to check out this page. This will prevent other users from editing the page until you check it back in.",
+	"pagecheckout-ui-cancel-button": "Cancel",
+	"pagecheckout-ui-checkin-confirm": "You are about to check in this page. This will allow other users to edit the page.",
+	"pagecheckout-ui-checkin-comment-label": "Comment",
+	"pagecheckout-ui-checkout-prompt-ve": "Do you want to check out this page? This will prevent other users from editing the page until you check it back in.",
+	"pagecheckout-prompt-on-edit": "Get a prompt to check out the page when starting an edit"
 }
