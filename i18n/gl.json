@@ -42,5 +42,14 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Usuario",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "Para quen se reservará a páxina",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Nome da páxina",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Se non se especifica, usarase a páxina de contexto do fluxo de traballo"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Se non se especifica, usarase a páxina de contexto do fluxo de traballo",
+	"pagecheckout-action-checkin-label": "Rexistrar a páxina",
+	"pagecheckout-action-checkout-label": "Reservar a páxina",
+	"pagecheckout-checkin-not-checked-out-by-user": "Este usuario non reservou a páxina",
+	"pagecheckout-ui-checkout-confirm": "Estás a piques de reservar esta páxina. Isto impedirá que outros usuarios a editen ata que quites a reserva.",
+	"pagecheckout-ui-cancel-button": "Cancelar",
+	"pagecheckout-ui-checkin-confirm": "Estás a piques de quitar a reserva desta páxina. Isto permitirá que outros usuarios a editen.",
+	"pagecheckout-ui-checkin-comment-label": "Comentario",
+	"pagecheckout-ui-checkout-prompt-ve": "Queres reservar esta páxina? Isto impedirá que outros usuarios a editen ata que quites a reserva.",
+	"pagecheckout-prompt-on-edit": "Recibir un aviso para reservar a páxina ao comezar unha edición"
 }
