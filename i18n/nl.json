@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"pagecheckout-desc": "Geeft een gebruiker exclusieve rechten op een pagina",
@@ -42,5 +43,14 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Gebruiker",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "Voor wie de pagina wordt uitgecheckt",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Paginanaam",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Indien niet opgegeven, wordt de werkstroom-contextpagina gebruikt"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "Indien niet opgegeven, wordt de werkstroom-contextpagina gebruikt",
+	"pagecheckout-action-checkin-label": "Controleren op pagina",
+	"pagecheckout-action-checkout-label": "Pagina uitchecken",
+	"pagecheckout-checkin-not-checked-out-by-user": "Deze pagina is niet door deze gebruiker uitgecheckt",
+	"pagecheckout-ui-checkout-confirm": "U staat op het punt deze pagina te uit te checken. Hierdoor kunnen andere gebruikers de pagina niet bewerken totdat u deze weer hebt ingecheckt.",
+	"pagecheckout-ui-cancel-button": "Annuleren",
+	"pagecheckout-ui-checkin-confirm": "U staat op het punt om deze pagina in te checken. Hierdoor kunnen andere gebruikers de pagina weer bewerken.",
+	"pagecheckout-ui-checkin-comment-label": "Opmerking",
+	"pagecheckout-ui-checkout-prompt-ve": "Wilt u deze pagina uitchecken? Hierdoor kunnen andere gebruikers de pagina niet bewerken totdat u deze weer hebt ingecheckt.",
+	"pagecheckout-prompt-on-edit": "Een melding ontvangen om de pagina uit te checken bij bewerken"
 }
