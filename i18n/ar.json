@@ -43,5 +43,14 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "مستخدم",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "لمن سيتم التحقق من الصفحة",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "اسم الصفحة",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "في حال عدم التحديد، سيتم استخدام صفحة سياق سير العمل"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "في حال عدم التحديد، سيتم استخدام صفحة سياق سير العمل",
+	"pagecheckout-action-checkin-label": "صفحة تسجيل الوصول",
+	"pagecheckout-action-checkout-label": "صفحة الدفع",
+	"pagecheckout-checkin-not-checked-out-by-user": "لم يقم هذا المستخدم بتسجيل الخروج من هذه الصفحة",
+	"pagecheckout-ui-checkout-confirm": "أنت على وشك الاطلاع على هذه الصفحة. سيمنع هذا المستخدمين الآخرين من تعديل الصفحة حتى تقوم بإعادة تسجيلها.",
+	"pagecheckout-ui-cancel-button": "إلغاء",
+	"pagecheckout-ui-checkin-confirm": "أنت على وشك تسجيل الدخول إلى هذه الصفحة. سيسمح هذا للمستخدمين الآخرين بتعديل الصفحة.",
+	"pagecheckout-ui-checkin-comment-label": "تعليق",
+	"pagecheckout-ui-checkout-prompt-ve": "هل ترغب في الاطلاع على هذه الصفحة؟ سيمنع هذا المستخدمين الآخرين من تعديل الصفحة حتى تقوم بإعادة تسجيلها.",
+	"pagecheckout-prompt-on-edit": "ستظهر لك رسالة تطلب منك مراجعة الصفحة عند بدء عملية التحرير."
 }
