@@ -216,6 +216,11 @@
 	"AvailableRights": [
 		"page-checkout-clear"
 	],
+	"GrantPermissions": {
+		"editprotected": {
+			"page-checkout-clear": true
+		}
+	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
 	],
