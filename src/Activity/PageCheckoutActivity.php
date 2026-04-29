@@ -33,11 +33,11 @@ class PageCheckoutActivity extends CheckoutActivity {
 		];
 		if ( $user->isSystemUser() ) {
 			$payload['alertText'] = Message::newFromKey(
-				'page-checkout-workflow-activity-checkout-reason'
+				'pagecheckout-workflow-activity-checkout-reason'
 			)->text();
 		} else {
 			$payload['comment'] = Message::newFromKey(
-				'page-checkout-workflow-activity-checkout-non-generic-reason'
+				'pagecheckout-workflow-activity-checkout-non-generic-reason'
 			)->text();
 		}
 		$this->manager->checkout( $title, $user, $payload );

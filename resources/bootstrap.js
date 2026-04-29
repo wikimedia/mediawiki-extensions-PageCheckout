@@ -2,6 +2,67 @@ window.ext = window.ext || {};
 window.ext.pageCheckout = window.ext.pageCheckout || {};
 window.ext.pageCheckout.ui = window.ext.pageCheckout.ui || {};
 
+window.ext.pageCheckout.actions = {
+	openClearCheckout: function ( page ) {
+		OO.ui.confirm( mw.msg( 'pagecheckout-ui-clear-confirm' ), {
+			title: mw.msg( 'pagecheckout-action-clear-label' ),
+			actions: [
+				{
+					label: mw.msg( 'pagecheckout-ui-cancel-button' ),
+					action: 'cancel'
+				},
+				{
+					label: mw.msg( 'pagecheckout-action-clear-label' ),
+					flags: [ 'destructive' ],
+					action: 'accept'
+				}
+			]
+		} ).done( async ( confirmed ) => {
+			if ( confirmed ) {
+				await ext.pageCheckout.api.clearCheckout( page );
+				window.location.reload();
+			}
+		} );
+	},
+	openCheckoutPage: function ( page ) {
+		const dfd = $.Deferred();
+		OO.ui.confirm( mw.msg( 'pagecheckout-ui-checkout-confirm' ), {
+			title: mw.msg( 'pagecheckout-action-checkout-label' ),
+			actions: [
+				{
+					label: mw.msg( 'pagecheckout-ui-cancel-button' ),
+					action: 'cancel'
+				},
+				{
+					label: mw.msg( 'pagecheckout-action-checkout-label' ),
+					flags: [ 'progressive' ],
+					action: 'accept'
+				}
+			]
+		} ).done( async ( confirmed ) => {
+			if ( confirmed ) {
+				await ext.pageCheckout.api.checkoutPage( page );
+				mw.notify( mw.msg( 'pagecheckout-ui-checkout-success' ), { type: 'success' } );
+				dfd.resolve( true );
+			} else {
+				dfd.resolve( false );
+			}
+		} );
+		return dfd.promise();
+	},
+	openCheckinPage: async function () {
+		await mw.loader.using( 'ext.pagecheckout.checkinDialog' );
+		const wm = OO.ui.getWindowManager();
+		const dialog = new ext.pageCheckout.ui.CheckinDialog();
+		wm.addWindows( [ dialog ] );
+		wm.openWindow( dialog ).closed.then( async ( data ) => {
+			if ( data && data.action === 'checkin' ) {
+				window.location.reload();
+			}
+		} );
+	}
+};
+
 window.ext.pageCheckout.api = {
 	checkoutPage: async function ( page ) {
 		return await ext.pageCheckout.api.ajax( 'checkout', { page: page }, 'POST' );
@@ -48,3 +109,14 @@ window.ext.pageCheckout.api = {
 		} );
 	}
 };
+
+$( () => {
+	const button = document.getElementById( 'pagecheckout-checkin-button' );
+
+	if ( button ) {
+		button.addEventListener( 'click', ( e ) => {
+			e.preventDefault();
+			ext.pageCheckout.actions.openCheckinPage();
+		} );
+	}
+} );

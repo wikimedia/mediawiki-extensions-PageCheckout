@@ -82,7 +82,7 @@ class AddContentActions implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 		$links['actions']['pc_clear'] = [
-			'text' => $sktemplate->getContext()->msg( 'pagecheckout-action-checkin-label' )->text(),
+			'text' => $sktemplate->getContext()->msg( 'pagecheckout-title-checkin-label' )->text(),
 			'href' => '#',
 			'class' => false,
 			'id' => 'ca-pc_checkin'

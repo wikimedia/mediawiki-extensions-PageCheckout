@@ -35,8 +35,21 @@ class PageCheckout implements IAlertProvider {
 		$payload = $entity->getPayload();
 		$alertText = $payload['alertText'] ?? null;
 
+		$isOwner = $context->getUser()->isRegistered() && $context->getUser()->getId() === $user->getId();
+
 		if ( $alertText ) {
 			return $alertText;
+		}
+		if ( $isOwner ) {
+			$message = $context->msg( 'pagecheckout-alertbanner-checkout-by-you' )->text();
+			$checkinButton = \Html::element( 'a', [
+				'href' => '#',
+				'id' => 'pagecheckout-checkin-button',
+				'class' => 'pagecheckout-checkin-button',
+				'data-user-id' => $user->getId(),
+			], $context->msg( 'pagecheckout-title-checkin-label' )->text() );
+
+			return $message . ' ' . $checkinButton;
 		}
 		$comment = $payload['comment'] ?? null;
 		$realname = empty( $user->getRealName() ) ? $user->getName() : $user->getRealName();
