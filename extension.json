@@ -122,7 +122,9 @@
 				"pagecheckout-ui-cancel-button",
 				"pagecheckout-ui-checkin-confirm",
 				"pagecheckout-action-checkin-label",
-				"pagecheckout-ui-checkin-comment-label"
+				"pagecheckout-title-checkin-label",
+				"pagecheckout-ui-checkin-comment-label",
+				"pagecheckout-ui-checkin-success"
 			],
 			"dependencies": [
 				"oojs-ui",
@@ -133,6 +135,12 @@
 		"ext.pagecheckout.boostrap": {
 			"scripts": [
 				"bootstrap.js"
+			],
+			"messages": [
+				"pagecheckout-ui-cancel-button",
+				"pagecheckout-action-clear-label",
+				"pagecheckout-ui-checkout-success",
+				"pagecheckout-action-checkout-label"
 			]
 		},
 		"ext.pagecheckout.ve.checkout": {
@@ -146,8 +154,8 @@
 			"messages": [
 				"pagecheckout-ui-checkout-prompt-ve",
 				"pagecheckout-ui-cancel-button",
-				"pagecheckout-action-checkout-label",
-				"pagecheckout-error-save-failed"
+				"pagecheckout-error-save-failed",
+				"pagecheckout-ui-checkout-success"
 			],
 			"dependencies": [
 				"ext.pagecheckout.boostrap"
@@ -164,7 +172,10 @@
 		"SkinTemplateNavigation::Universal": "addContentActions",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"MWStakeAlertBannersRegisterProviders": "addAlertBanner",
-		"GetPreferences": "addPreferences"
+		"NamespaceManager::getMetaFields": "integrateIntoNamespaceManager",
+		"BSApiNamespaceStoreMakeData": "integrateIntoNamespaceManager",
+		"NamespaceManager::editNamespace": "integrateIntoNamespaceManager",
+		"NamespaceManagerBeforePersistSettings": "integrateIntoNamespaceManager"
 	},
 	"HookHandlers": {
 		"addDatabaseTables": {
@@ -189,12 +200,9 @@
 		"discovery-skin": {
 			"class": "\\MediaWiki\\Extension\\PageCheckout\\HookHandler\\DiscoverySkin"
 		},
-		"addPreferences": {
-			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\AddUserPreferences",
-			"services": [
-				"UserOptionsLookup",
-				"MainConfig"
-			]
+		"integrateIntoNamespaceManager": {
+			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\IntegrateIntoNamespaceManager",
+			"services": [ "MainConfig", "NamespaceInfo" ]
 		}
 	},
 	"GroupPermissions": {
@@ -216,9 +224,9 @@
 		"pagecheckout/*": "LogFormatter"
 	},
 	"config": {
-		"PageCheckoutPromptToCheckoutOnEdit": {
-			"value": true,
-			"description": "If true, users will be prompted to checkout a page when they attempt to edit it without having it checked out."
+		"PageCheckoutPromptToCheckoutOnEditNamespaces": {
+			"value": [],
+			"description": "Namespaces for which users will be prompted to checkout a page when they attempt to edit it without having it checked out."
 		}
 	},
 	"RestRoutes": [

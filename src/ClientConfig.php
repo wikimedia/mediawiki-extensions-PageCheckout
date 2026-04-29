@@ -14,7 +14,7 @@ class ClientConfig {
 	 */
 	public static function getVEPluginConfig( Context $context, Config $config ): array {
 		return [
-			'checkoutPromptEnabledDefault' => $config->get( 'PageCheckoutPromptToCheckoutOnEdit' ),
+			'checkoutPromptEnabledNamespaces' => $config->get( 'PageCheckoutPromptToCheckoutOnEditNamespaces' ),
 		];
 	}
 }

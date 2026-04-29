@@ -6,7 +6,7 @@ ext.pageCheckout.ui.CheckinDialog = function ( config ) {
 OO.inheritClass( ext.pageCheckout.ui.CheckinDialog, OO.ui.ProcessDialog );
 
 ext.pageCheckout.ui.CheckinDialog.static.name = 'checkin';
-ext.pageCheckout.ui.CheckinDialog.static.title = mw.msg( 'pagecheckout-action-checkin-label' );
+ext.pageCheckout.ui.CheckinDialog.static.title = mw.msg( 'pagecheckout-title-checkin-label' );
 ext.pageCheckout.ui.CheckinDialog.static.actions = [
 	{
 		label: mw.msg( 'pagecheckout-action-checkin-label' ),
@@ -14,7 +14,8 @@ ext.pageCheckout.ui.CheckinDialog.static.actions = [
 		action: 'checkin'
 	},
 	{
-		label: mw.msg( 'pagecheckout-ui-cancel-button' ),
+		icon: 'close',
+		title: mw.msg( 'pagecheckout-ui-cancel-button' ),
 		flags: 'safe',
 		action: 'cancel'
 	}
@@ -30,7 +31,10 @@ ext.pageCheckout.ui.CheckinDialog.prototype.initialize = async function () {
 
 	const message = mw.msg( 'pagecheckout-ui-checkin-confirm' );
 	this.panel.$element.append( new OO.ui.LabelWidget( { label: message } ).$element );
-	this.comment = new OO.ui.TextInputWidget();
+	this.comment = new OO.ui.MultilineTextInputWidget( { maxLength: 255 } );
+	this.comment.connect( this, {
+		resize: 'updateSize'
+	} );
 	this.panel.$element.append( new OO.ui.FieldLayout( this.comment, {
 		label: mw.msg( 'pagecheckout-ui-checkin-comment-label' ),
 		align: 'top'
@@ -74,6 +78,7 @@ ext.pageCheckout.ui.CheckinDialog.prototype.getActionProcess = function ( action
 							.then( () => {
 								this.popPending();
 								this.close( { action: 'checkin' } );
+								mw.notify( mw.msg( 'pagecheckout-ui-checkin-success' ), { type: 'success' } );
 							} ).catch( ( error ) => {
 								this.popPending();
 								dfd.reject( error );
