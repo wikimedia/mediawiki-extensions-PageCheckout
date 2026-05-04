@@ -76,7 +76,7 @@
 				"columns": [ "pcl_page_id", "pcl_user_id" ],
 				"unique": false
 			}
- 		],
+		],
 		"pk": [ "pcl_id" ]
 	}
 }
