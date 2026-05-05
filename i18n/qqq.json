@@ -29,6 +29,7 @@
 	"logentry-pagecheckout-checkin": "Log message about a user, that checked-in a page for a user\n*$1 - Realname of the user, that checked-in a page for a user\n*$2 - Username of the user that checked-in a page for a user. Use GENDER\n*$3 - Name of the page, that was checked-in by the user for a user.\n*$4 - Realname of the user, the page was checked-in for",
 	"logentry-pagecheckout-checkout": "Log message about a user, that checked-out a page for a user\n*$1 - Realname of the user, that checked-out a page for a user\n*$2 - Username of the user that checked-out a page for a user. Use GENDER\n*$3 - Name of the page, that was checked-out by the user for a user.\n*$4 - Realname of the user, the page was checked-out for",
 	"pagecheckout-alertbanner-checkout": "Message in the banner on top of the page, that is currently checked-out for a user\n\nParameters:\n*$1 - Username of the user, the page is currently checked-out for. Use GENDER\n*$2 - Realname of the user, the page is currently checked-out for.",
+	"pagecheckout-alertbanner-checkout-by-you": "Message shown in the top banner when the current page is checked out to the viewing user, informing them they have exclusive editing rights",
 	"action-page-checkout-clear": "{{doc-action|page-checkout-clear}}",
 	"right-page-checkout-clear": "{{doc-right|page-checkout-clear}}",
 	"pagecheckout-alertbanner-checkout-with-comment": "Message in the banner on top of the page, that is currently checked-out for a user, when comment is available.\n\n*$1 - Username of the user, the page is currently checked-out for. To be used with GENDER.\n*$2 - Real name or display name of the user, the page is currently checked-out for.\n*$3 - Comment",
@@ -58,6 +59,5 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Prompt shown in the Visual Editor asking the user whether they want to check out the page before editing, warning that other users will be prevented from editing until the page is checked back in",
 	"pagecheckout-ui-checkout-success": "Message shown to the user after successfully checking out a page",
 	"pagecheckout-ui-checkin-success": "Message shown to the user after successfully checking in (unlocking) a page",
-	"pagecheckout-alertbanner-checkout-by-you": "Message shown in the top banner when the current page is checked out to the viewing user, informing them they have exclusive editing rights",
 	"pagecheckout-ns-pref-show-popup": "Label for the user preference that enables or disables the prompt to check out a page when starting to edit"
 }

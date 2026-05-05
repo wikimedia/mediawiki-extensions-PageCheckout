@@ -29,9 +29,6 @@
 	"action-page-checkout-clear": "het voorbehoud op het bewerken van de pagina op te heffen",
 	"right-page-checkout-clear": "Het voorbehoud op het bewerken van pagina’s opheffen",
 	"pagecheckout-alertbanner-checkout-with-comment": "Het bewerken van deze pagina is momenteel voorbehouden aan $2. Opmerking: $3{{GENDER:$1|}}",
-	"page-checkout-workflow-activity-checkout-reason": "Het bewerken van deze pagina is momenteel voorbehouden vanwege werk in uitvoering",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Voorbehoud ingesteld vanwege werk in uitvoering",
-	"page-checkout-workflow-clear-checkout": "Voorbehoud opgeheven vanwege onderbreken werk in uitvoering",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Activiteit “Pagina uitchecken”",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Gebruiker",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "Voor wie de pagina wordt uitgecheckt",
@@ -51,6 +48,5 @@
 	"pagecheckout-ui-cancel-button": "Annuleren",
 	"pagecheckout-ui-checkin-confirm": "U staat op het punt om deze pagina in te checken. Hierdoor kunnen andere gebruikers de pagina weer bewerken.",
 	"pagecheckout-ui-checkin-comment-label": "Opmerking",
-	"pagecheckout-ui-checkout-prompt-ve": "Wilt u deze pagina uitchecken? Hierdoor kunnen andere gebruikers de pagina niet bewerken totdat u deze weer hebt ingecheckt.",
-	"pagecheckout-prompt-on-edit": "Een melding ontvangen om de pagina uit te checken bij bewerken"
+	"pagecheckout-ui-checkout-prompt-ve": "Wilt u deze pagina uitchecken? Hierdoor kunnen andere gebruikers de pagina niet bewerken totdat u deze weer hebt ingecheckt."
 }

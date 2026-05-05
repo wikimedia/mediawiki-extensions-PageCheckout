@@ -29,9 +29,6 @@
 	"action-page-checkout-clear": "مسح صفحة إتمام عملية الشراء",
 	"right-page-checkout-clear": "مسح صفحة إتمام عملية الشراء",
 	"pagecheckout-alertbanner-checkout-with-comment": "هذه الصفحة {{GENDER:$1|مُستخدَمة}} حاليًا مقابل $2 التعليق: $3",
-	"page-checkout-workflow-activity-checkout-reason": "هذه الصفحة قيد التشغيل حاليًا بسبب سير عمل جارٍ",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "تم التحقق منه أثناء تنفيذ سير العمل",
-	"page-checkout-workflow-clear-checkout": "تمت الموافقة على عملية الدفع بسبب تعطل سير العمل",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "نشاط \"تسجيل الخروج من الصفحة\"",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "مستخدم",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "لمن سيتم التحقق من الصفحة",
@@ -51,6 +48,5 @@
 	"pagecheckout-ui-cancel-button": "إلغاء",
 	"pagecheckout-ui-checkin-confirm": "أنت على وشك تسجيل الدخول إلى هذه الصفحة. سيسمح هذا للمستخدمين الآخرين بتعديل الصفحة.",
 	"pagecheckout-ui-checkin-comment-label": "تعليق",
-	"pagecheckout-ui-checkout-prompt-ve": "هل ترغب في الاطلاع على هذه الصفحة؟ سيمنع هذا المستخدمين الآخرين من تعديل الصفحة حتى تقوم بإعادة تسجيلها.",
-	"pagecheckout-prompt-on-edit": "ستظهر لك رسالة تطلب منك مراجعة الصفحة عند بدء عملية التحرير."
+	"pagecheckout-ui-checkout-prompt-ve": "هل ترغب في الاطلاع على هذه الصفحة؟ سيمنع هذا المستخدمين الآخرين من تعديل الصفحة حتى تقوم بإعادة تسجيلها."
 }

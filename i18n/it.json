@@ -18,6 +18,5 @@
 	"pagecheckout-ui-cancel-button": "Annulla",
 	"pagecheckout-ui-checkin-confirm": "Stai per sbloccare questa pagina. Ciò consentirà ad altri utenti di modificarla.",
 	"pagecheckout-ui-checkin-comment-label": "Commento",
-	"pagecheckout-ui-checkout-prompt-ve": "Vuoi bloccare la modifica di questa pagina? In questo modo impedirai ad altri utenti di modificarla finché non la sbloccherai.",
-	"pagecheckout-prompt-on-edit": "Ricevi un invito a bloccare la pagina quando inizi una modifica"
+	"pagecheckout-ui-checkout-prompt-ve": "Vuoi bloccare la modifica di questa pagina? In questo modo impedirai ad altri utenti di modificarla finché non la sbloccherai."
 }
