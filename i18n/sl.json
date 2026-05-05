@@ -28,8 +28,5 @@
 	"pagecheckout-alertbanner-checkout": "Ta stran je trenutno {{GENDER:$1|rezervirana}} za $2",
 	"action-page-checkout-clear": "počistiti rezervacijo strani",
 	"right-page-checkout-clear": "Počisti rezervacijo strani",
-	"pagecheckout-alertbanner-checkout-with-comment": "Ta stran je trenutno {{GENDER:$1|rezervirana}} za $2. Komentar: $3",
-	"page-checkout-workflow-activity-checkout-reason": "Ta stran je trenutno rezervirana zaradi potekajočega delovnega toka",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Rezervirano med izvajanjem delovnega toka",
-	"page-checkout-workflow-clear-checkout": "Rezervacija počiščena pri prekinitvi delovnega toka"
+	"pagecheckout-alertbanner-checkout-with-comment": "Ta stran je trenutno {{GENDER:$1|rezervirana}} za $2. Komentar: $3"
 }

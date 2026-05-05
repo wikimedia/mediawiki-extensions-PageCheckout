@@ -28,7 +28,6 @@
 	"action-page-checkout-clear": "पृष्ठ चेक-आउट साफ करने",
 	"right-page-checkout-clear": "पृष्ठ चेक-आउट साफ करना",
 	"pagecheckout-alertbanner-checkout-with-comment": "यह पृष्ठ वर्तमान में $2 के लिए {{GENDER:$1|चेक-आउट किया हुआ}} है। टिप्पणी: $3",
-	"page-checkout-workflow-activity-checkout-reason": "यह पृष्ठ वर्तमान में एक चल रहे कार्यप्रवाह के कारण चेक-आउट किया हुआ है।",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "सदस्य",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename": "पृष्ठ का नाम",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename-help": "अगर निर्दिष्ट नहीं किया जाता है तो कार्यप्रवाह के प्रासंगिक पृष्ठ का उपयोग किया जाएगा",

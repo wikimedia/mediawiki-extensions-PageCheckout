@@ -28,9 +28,6 @@
 	"action-page-checkout-clear": "исчисти земање на страницата",
 	"right-page-checkout-clear": "Исчисти земање на страницата",
 	"pagecheckout-alertbanner-checkout-with-comment": "Оваа страница е моментално {{GENDER:$1|земена}} за $2. Коментар: $3",
-	"page-checkout-workflow-activity-checkout-reason": "Оваа страница е моментално земена поради работен тек кој е одвива",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Земена поради извршување на работен тек",
-	"page-checkout-workflow-clear-checkout": "Земеното е исчистено поради напуштен работен тек",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Активност: „Земање на страници“",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Корисник",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "За кого ќе се земе страницата",
@@ -50,6 +47,5 @@
 	"pagecheckout-ui-cancel-button": "Откажи",
 	"pagecheckout-ui-checkin-confirm": "На пат сте да ја вратите страницата. Ова ќе им овозможи на другите корисници да ја уредуваат.",
 	"pagecheckout-ui-checkin-comment-label": "Коментар",
-	"pagecheckout-ui-checkout-prompt-ve": "Дали сакате да ја земете страницава? Ова ќе ги спречи другите корисници да ја уредуваат сè додека вие не ја вратите.",
-	"pagecheckout-prompt-on-edit": "Потсети ме за земање на страницата кога почнувам да уредувам"
+	"pagecheckout-ui-checkout-prompt-ve": "Дали сакате да ја земете страницава? Ова ќе ги спречи другите корисници да ја уредуваат сè додека вие не ја вратите."
 }

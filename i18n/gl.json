@@ -28,9 +28,6 @@
 	"action-page-checkout-clear": "quitar a reserva activa da páxina",
 	"right-page-checkout-clear": "Quitar a reserva da páxina",
 	"pagecheckout-alertbanner-checkout-with-comment": "Nestes intres, esta páxina está {{GENDER:$1|reservada}} para $2. Comentario: $3",
-	"page-checkout-workflow-activity-checkout-reason": "Nestes intres, esta páxina está reservada debido a un fluxo de traballo en execución",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Reservada durante a execución dun fluxo de traballo",
-	"page-checkout-workflow-clear-checkout": "Reserva retirada debido á cancelación dun fluxo de traballo",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Actividade de reserva da páxina",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "Usuario",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "Para quen se reservará a páxina",
@@ -50,6 +47,5 @@
 	"pagecheckout-ui-cancel-button": "Cancelar",
 	"pagecheckout-ui-checkin-confirm": "Estás a piques de quitar a reserva desta páxina. Isto permitirá que outros usuarios a editen.",
 	"pagecheckout-ui-checkin-comment-label": "Comentario",
-	"pagecheckout-ui-checkout-prompt-ve": "Queres reservar esta páxina? Isto impedirá que outros usuarios a editen ata que quites a reserva.",
-	"pagecheckout-prompt-on-edit": "Recibir un aviso para reservar a páxina ao comezar unha edición"
+	"pagecheckout-ui-checkout-prompt-ve": "Queres reservar esta páxina? Isto impedirá que outros usuarios a editen ata que quites a reserva."
 }

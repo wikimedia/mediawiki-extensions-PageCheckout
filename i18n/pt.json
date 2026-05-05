@@ -27,8 +27,5 @@
 	"pagecheckout-alertbanner-checkout": "Neste momento, esta página está reservada para $2{{GENDER:$1|}}",
 	"action-page-checkout-clear": "limpar a reserva da página",
 	"right-page-checkout-clear": "Limpar a reserva da página",
-	"pagecheckout-alertbanner-checkout-with-comment": "Neste momento, esta página está reservada para $2. Comentário: $3{{GENDER:$1|}}",
-	"page-checkout-workflow-activity-checkout-reason": "Neste momento, esta página está reservada devido a um fluxo de trabalho em execução",
-	"page-checkout-workflow-activity-checkout-non-generic-reason": "Reservada durante a execução de um fluxo de trabalho",
-	"page-checkout-workflow-clear-checkout": "Libertação de reserva devido à execução de um fluxo de trabalho"
+	"pagecheckout-alertbanner-checkout-with-comment": "Neste momento, esta página está reservada para $2. Comentário: $3{{GENDER:$1|}}"
 }
