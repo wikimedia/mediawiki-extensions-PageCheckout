@@ -84,7 +84,7 @@ mw.hook( 've.activationComplete' ).add( async () => {
 	initialized = true;
 	const enabledNamespaces = await require( './config.json' ).checkoutPromptEnabledNamespaces || [];
 	const currentNamespace = mw.config.get( 'wgNamespaceNumber' );
-	const isEnabled = enabledNamespaces.indexOf( currentNamespace ) !== -1;
+	const isEnabled = enabledNamespaces.includes( currentNamespace );
 	if ( !isEnabled ) {
 		return;
 	}

@@ -98,7 +98,7 @@ window.ext.pageCheckout.api = {
 			options.body = JSON.stringify( params );
 		} else if ( Object.keys( params ).length ) {
 			const query = new URLSearchParams( params ).toString();
-			url += ( url.indexOf( '?' ) !== -1 ? '&' : '?' ) + query;
+			url += ( url.includes( '?' ) ? '&' : '?' ) + query;
 		}
 
 		return fetch( url, options ).then( ( res ) => {
