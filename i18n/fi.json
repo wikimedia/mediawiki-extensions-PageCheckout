@@ -7,12 +7,12 @@
 		]
 	},
 	"pagecheckout-error-no-title": "Virheellinen otsikko",
-	"pagecheckout-error-save-event": "Lukituksen tallennus epäonnistui",
 	"pagecheckout-error-save-failed": "Sivun lukitseminen epäonnistui",
 	"pagecheckout-error-no-checkout": "Lukitusta ei voi avata, koska sivua ei ole lukittu",
 	"pagecheckout-error-no-checkout-id": "Lukituksen avaaminen epäonnistui! Lukitustunnusta ei ole asetettu",
 	"pagecheckout-error-db-insert": "Lukituksen asettaminen epäonnistui",
 	"pagecheckout-error-db-retrieve-inserted": "Aiemmin asetetun lukon noutaminen epäonnistui",
+	"pagecheckout-error-save-event": "Lukituksen tallennus epäonnistui",
 	"pagecheckout-action-clear-label": "Poista lukitus",
 	"apihelp-pagecheckout-clear-summary": "Poista sivun aktiivinen lukitus",
 	"apihelp-pagecheckout-clear-param-page_title": "Sen sivun nimi, jonka lukituksen haluat poistaa",
