@@ -27,7 +27,7 @@
 	"logentry-pagecheckout-checkout": "$1님이 사용자 $4님을 위해 $3 문서를 {{GENDER:$2|잠금}}",
 	"pagecheckout-alertbanner-checkout": "이 문서는 현재 $2님을 위해 {{GENDER:$1|잠겨}} 있습니다",
 	"pagecheckout-alertbanner-checkout-by-you": "이 문서는 현재 당신을 위해 잠겨 있습니다. 당신은 독점 편집 권한을 가지고 있습니다.",
-	"action-page-checkout-clear": "문서 잠금을 지울",
+	"action-page-checkout-clear": "문서 잠금 지우기",
 	"right-page-checkout-clear": "문서 잠금 지우기",
 	"pagecheckout-alertbanner-checkout-with-comment": "이 문서는 현재 $2님을 위해 {{GENDER:$1|잠겨}} 있습니다. 의견: $3",
 	"pagecheckout-workflow-activity-checkout-reason": "이 문서는 현재 워크플로가 실행 중이기에 잠겨진 상태입니다",
