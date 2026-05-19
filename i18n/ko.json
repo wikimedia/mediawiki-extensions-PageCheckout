@@ -29,7 +29,7 @@
 	"logentry-pagecheckout-checkin": "사용자 $4님이 체크아웃한 문서 $3를 $1님이 {{GENDER:$2|잠금}}",
 	"logentry-pagecheckout-checkout": "$1님이 사용자 $4님을 위해 $3 문서를 {{GENDER:$2|잠금}}",
 	"pagecheckout-alertbanner-checkout": "이 문서는 현재 $2님을 위해 {{GENDER:$1|잠겨}} 있습니다",
-	"action-page-checkout-clear": "문서 잠금을 지울",
+	"action-page-checkout-clear": "문서 잠금 지우기",
 	"right-page-checkout-clear": "문서 잠금 지우기",
 	"pagecheckout-alertbanner-checkout-with-comment": "이 문서는 현재 $2님을 위해 {{GENDER:$1|잠겨}} 있습니다. 의견: $3",
 	"page-checkout-workflow-activity-checkout-reason": "이 문서는 현재 워크플로가 실행 중이기에 체크아웃된 상태입니다",
