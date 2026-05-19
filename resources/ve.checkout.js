@@ -100,7 +100,6 @@ mw.hook( 've.activationComplete' ).add( async () => {
 	OO.ui.confirm(
 		mw.msg( 'pagecheckout-ui-checkout-prompt-ve' ), {
 			title: mw.msg( 'pagecheckout-action-checkout-label' ),
-			size: 'large',
 			actions: [
 				{
 					label: mw.msg( 'pagecheckout-ui-cancel-button' ),

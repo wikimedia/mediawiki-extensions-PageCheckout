@@ -140,7 +140,8 @@
 				"pagecheckout-ui-cancel-button",
 				"pagecheckout-action-clear-label",
 				"pagecheckout-ui-checkout-success",
-				"pagecheckout-action-checkout-label"
+				"pagecheckout-action-checkout-label",
+				"pagecheckout-ui-checkout-confirm"
 			]
 		},
 		"ext.pagecheckout.ve.checkout": {
