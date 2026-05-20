@@ -117,10 +117,6 @@ class CheckoutManager {
 		return false;
 	}
 
-	/**
-	 * @param Title $title
-	 * @return bool
-	 */
 	public function isCheckedOut( Title $title ): bool {
 		return $this->getCheckoutEntity( $title ) instanceof CheckoutEntity;
 	}
