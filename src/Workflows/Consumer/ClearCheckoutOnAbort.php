@@ -15,9 +15,6 @@ class ClearCheckoutOnAbort implements Consumer {
 	/** @var CheckoutManager */
 	private $checkoutManager;
 
-	/**
-	 * @param CheckoutManager $checkoutManager
-	 */
 	public function __construct( CheckoutManager $checkoutManager ) {
 		$this->checkoutManager = $checkoutManager;
 	}

@@ -18,19 +18,11 @@ class CheckoutRepo {
 	/** @var ObjectCacheFactory */
 	private $objectCacheFactory;
 
-	/**
-	 * @param IConnectionProvider $connectionProvider
-	 * @param ObjectCacheFactory $objectCacheFactory
-	 */
 	public function __construct( IConnectionProvider $connectionProvider, ObjectCacheFactory $objectCacheFactory ) {
 		$this->connectionProvider = $connectionProvider;
 		$this->objectCacheFactory = $objectCacheFactory;
 	}
 
-	/**
-	 * @param Title $title
-	 * @return CheckoutEntity|null
-	 */
 	public function getForPage( Title $title ): ?CheckoutEntity {
 		if ( !$title->exists() ) {
 			return null;
@@ -54,10 +46,6 @@ class CheckoutRepo {
 		);
 	}
 
-	/**
-	 * @param User $user
-	 * @return array
-	 */
 	public function getForUser( User $user ): array {
 		if ( !$user->isRegistered() ) {
 			return [];
