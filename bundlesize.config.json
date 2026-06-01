@@ -1,0 +1,10 @@
+[
+	{
+		"resourceModule": "ext.pagecheckout.contentActions",
+		"maxSize": "2 kB"
+	},
+	{
+		"resourceModule": "ext.pagecheckout.boostrap",
+		"maxSize": "2 kB"
+	}
+]
