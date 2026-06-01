@@ -25,7 +25,7 @@ class ClearCheckoutOnAbort implements Consumer {
 	/**
 	 * @param Message $message
 	 */
-	public function handle( Message $message ) {
+	public function handle( Message $message ): void {
 		$event = $message->event();
 		if ( !$event instanceof WorkflowAborted ) {
 			return;
