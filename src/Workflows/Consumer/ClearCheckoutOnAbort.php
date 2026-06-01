@@ -46,7 +46,7 @@ class ClearCheckoutOnAbort implements Consumer {
 		if ( isset( $payload['workflowId'] ) && $payload['workflowId'] === $workflowId->toString() ) {
 			$this->checkoutManager->checkIn(
 				$page,
-				MediaWikiMessage::newFromKey( "page-checkout-workflow-clear-checkout" )->text()
+				MediaWikiMessage::newFromKey( "pagecheckout-workflow-clear-checkout" )->text()
 			);
 		}
 	}
