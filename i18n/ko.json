@@ -17,7 +17,7 @@
 	"pagecheckout-error-no-checkout": "현재 잠금 되어 있지 않은 문서를 잠금 해제 할 수 없음",
 	"pagecheckout-error-no-checkout-id": "잠금 해제 실패! 잠금 ID 설정되지 않음",
 	"pagecheckout-error-db-insert": "잠금 삽입 실패",
-	"pagecheckout-error-db-retrieve-inserted": "이전에 삽입된 잠금을 불러오는데 실패",
+	"pagecheckout-error-db-retrieve-inserted": "이전에 삽입된 잠금을 가져오는 데 실패",
 	"pagecheckout-lockdown-reason": "문서가 $2님에 의해 잠겨 있기 때문에 \"$1\" 작업은 허용되지 않습니다",
 	"pagecheckout-action-clear-label": "잠금 지우기",
 	"apihelp-pagecheckout-clear-example": "Main_Page 잠금 지우기",
