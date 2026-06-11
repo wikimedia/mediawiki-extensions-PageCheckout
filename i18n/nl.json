@@ -6,8 +6,8 @@
 		]
 	},
 	"pagecheckout-desc": "Geeft een gebruiker exclusieve rechten op een pagina",
-	"pagecheckout-error-no-title": "Ongeldige titel",
-	"pagecheckout-error-no-user": "Ongeldige gebruiker opgegeven",
+	"pagecheckout-error-no-title": "Incorrecte titel",
+	"pagecheckout-error-no-user": "Incorrecte gebruiker opgegeven",
 	"pagecheckout-error-has-checkout": "Pagina is al vergrendeld",
 	"pagecheckout-error-save-failed": "Het vergrendelen van de pagina is mislukt",
 	"pagecheckout-error-no-checkout": "Kan de pagina die momenteel niet vergrendeld is niet ontgrendelen",
