@@ -1,7 +1,9 @@
 [
 	{
 		"resourceModule": "ext.pagecheckout.contentActions",
-		"maxSize": "2 kB"
+		"maxSize": "2 kB",
+		"@note": "Ignore oojs-ui*",
+		"ignoreDependencies": true
 	},
 	{
 		"resourceModule": "ext.pagecheckout.boostrap",
