@@ -23,7 +23,7 @@
 	"pagecheckout-ui-clear-confirm": "Confirm clearing active lock on this page? This will make page editable for all normally eligible users",
 	"log-name-pagecheckout": "Page locks",
 	"log-description-pagecheckout": "Tracks the state of page locks and unlocks",
-	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|locked}} page $3 that was checked out for {{GENDER:$4|user}} $4",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|unlocked}} page $3 that was locked for {{GENDER:$4|user}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|locked}} page $3 for {{GENDER:$4|user}} $4",
 	"pagecheckout-alertbanner-checkout": "This page is locked by $2. You cannot edit it.",
 	"pagecheckout-alertbanner-checkout-by-you": "You have locked this page. Only you can edit it.",
