@@ -31,14 +31,6 @@ ext.pageCheckout.ui.CheckinDialog.prototype.initialize = async function () {
 
 	const message = mw.msg( 'pagecheckout-ui-checkin-confirm' );
 	this.panel.$element.append( new OO.ui.LabelWidget( { label: message } ).$element );
-	this.comment = new OO.ui.MultilineTextInputWidget( { maxLength: 255 } );
-	this.comment.connect( this, {
-		resize: 'updateSize'
-	} );
-	this.panel.$element.append( new OO.ui.FieldLayout( this.comment, {
-		label: mw.msg( 'pagecheckout-ui-checkin-comment-label' ),
-		align: 'top'
-	} ).$element );
 
 	const plugins = await ext.pageCheckout.api.getPlugins( mw.config.get( 'wgArticleId' ) );
 	for ( const pluginKey in plugins ) {
@@ -71,10 +63,9 @@ ext.pageCheckout.ui.CheckinDialog.prototype.getActionProcess = function ( action
 			this.pushPending();
 			if ( action === 'checkin' ) {
 				const dfd = $.Deferred();
-				const comment = this.comment.getValue();
 				this.getPluginData().done(
 					( pluginData ) => {
-						ext.pageCheckout.api.checkinPage( mw.config.get( 'wgPageName' ), comment, pluginData )
+						ext.pageCheckout.api.checkinPage( mw.config.get( 'wgPageName' ), '', pluginData )
 							.then( () => {
 								this.popPending();
 								this.close( { action: 'checkin' } );
