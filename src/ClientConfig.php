@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\PageCheckout;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\ResourceLoader\Context;
 
 class ClientConfig {
