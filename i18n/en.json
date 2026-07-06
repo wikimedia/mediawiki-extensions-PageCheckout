@@ -48,6 +48,7 @@
 	"pagecheckout-action-checkin-label": "Unlock",
 	"pagecheckout-title-checkin-label": "Unlock page",
 	"pagecheckout-action-checkout-label": "Lock page",
+	"pagecheckout-action-checkout-confirm-label": "Lock",
 	"pagecheckout-checkin-not-checked-out-by-user": "Page is not locked by this user",
 	"pagecheckout-ui-checkout-confirm": "You are about to lock page. This will grant you exclusive editing rights until you unlock the page.",
 	"pagecheckout-ui-cancel-button": "Cancel",
