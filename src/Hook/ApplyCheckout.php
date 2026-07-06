@@ -32,6 +32,9 @@ class ApplyCheckout implements GetUserPermissionsErrorsHook {
 	 * @return bool
 	 */
 	public function onGetUserPermissionsErrors( $title, $user, $action, &$result ) {
+		if ( !$this->manager->isPageCheckoutEnabled( $title ) ) {
+			return true;
+		}
 		if ( !in_array( $action, $this->permissions ) ) {
 			return true;
 		}

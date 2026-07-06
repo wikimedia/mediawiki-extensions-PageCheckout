@@ -60,5 +60,9 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Prompt shown in the Visual Editor asking the user whether they want to check out the page before editing, warning that other users will be prevented from editing until the page is checked back in",
 	"pagecheckout-ui-checkout-success": "Message shown to the user after successfully checking out a page",
 	"pagecheckout-ui-checkin-success": "Message shown to the user after successfully checking in (unlocking) a page",
-	"pagecheckout-ns-pref-show-popup": "Label for the user preference that enables or disables the prompt to check out a page when starting to edit"
+	"pagecheckout-pref-show-popup": "Label for the user preference that enables or disables the prompt to check out a page when starting to edit",
+	"pagecheckout-pref-show-popup-help": "Help text for the user preference that enables or disables the prompt to check out a page when starting to edit",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Label for the namespace preference",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Help text for the namespace preference",
+	"pagecheckout-error-disabled": "Error message shown when a user tries to check out a page in a namespace where the feature is disabled"
 }

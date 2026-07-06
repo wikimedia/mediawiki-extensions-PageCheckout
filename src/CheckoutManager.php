@@ -5,11 +5,13 @@ namespace MediaWiki\Extension\PageCheckout;
 use DateTime;
 use InvalidArgumentException;
 use LogicException;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEvent;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutEventRepo;
 use MediaWiki\Extension\PageCheckout\Repo\CheckoutRepo;
 use MediaWiki\Message\Message;
+use MediaWiki\Page\PageIdentity;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 
@@ -26,6 +28,8 @@ class CheckoutManager {
 	private $specialLogLogger;
 	/** @var PluginManager */
 	private $pluginManager;
+	/** @var Config */
+	private $config;
 
 	/**
 	 * @param User $actor
@@ -33,16 +37,18 @@ class CheckoutManager {
 	 * @param CheckoutEventRepo $eventRepo
 	 * @param SpecialLogLogger $logger
 	 * @param PluginManager $pluginManager
+	 * @param Config $config
 	 */
 	public function __construct(
 		User $actor, CheckoutRepo $checkoutRepo, CheckoutEventRepo $eventRepo,
-		SpecialLogLogger $logger, PluginManager $pluginManager
+		SpecialLogLogger $logger, PluginManager $pluginManager, Config $config
 	) {
 		$this->actor = $actor;
 		$this->checkoutRepo = $checkoutRepo;
 		$this->eventRepo = $eventRepo;
 		$this->specialLogLogger = $logger;
 		$this->pluginManager = $pluginManager;
+		$this->config = $config;
 	}
 
 	/**
@@ -54,6 +60,9 @@ class CheckoutManager {
 	 * @throws LogicException
 	 */
 	public function checkout( Title $title, User $forUser, $payload = [] ): CheckoutEntity {
+		if ( !$this->isPageCheckoutEnabled( $title ) ) {
+			throw new InvalidArgumentException( Message::newFromKey( 'pagecheckout-error-disabled' )->text() );
+		}
 		if ( !$title->exists() ) {
 			throw new InvalidArgumentException( Message::newFromKey( 'pagecheckout-error-no-title' )->text() );
 		}
@@ -117,7 +126,14 @@ class CheckoutManager {
 		return false;
 	}
 
+	/**
+	 * @param Title $title
+	 * @return bool
+	 */
 	public function isCheckedOut( Title $title ): bool {
+		if ( !$this->isPageCheckoutEnabled( $title ) ) {
+			return false;
+		}
 		return $this->getCheckoutEntity( $title ) instanceof CheckoutEntity;
 	}
 
@@ -131,6 +147,15 @@ class CheckoutManager {
 		}
 
 		return $this->checkouts[$title->getArticleID()];
+	}
+
+	/**
+	 * @param PageIdentity $page
+	 * @return bool
+	 */
+	public function isPageCheckoutEnabled( PageIdentity $page ): bool {
+		$enabledNamespaces = $this->config->get( 'PageCheckoutEnabledNamespaces' ) ?? [];
+		return in_array( $page->getNamespace(), $enabledNamespaces );
 	}
 
 	/**

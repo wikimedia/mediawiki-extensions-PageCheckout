@@ -13,7 +13,8 @@ return [
 			new CheckoutRepo( $services->getConnectionProvider(), $services->getObjectCacheFactory() ),
 			new CheckoutEventRepo( $services->getDBLoadBalancer() ),
 			new SpecialLogLogger(),
-			$services->getService( 'PageCheckout.PluginManager' )
+			$services->getService( 'PageCheckout.PluginManager' ),
+			$services->getMainConfig()
 		);
 	},
 	'PageCheckout.PluginManager' => static function ( \MediaWiki\MediaWikiServices $services ) {

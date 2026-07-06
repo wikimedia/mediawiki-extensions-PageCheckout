@@ -20,6 +20,9 @@ class PageCheckout implements IAlertProvider {
 		if ( !$context->getTitle() || !$context->getTitle()->exists() ) {
 			return '';
 		}
+		if ( !$this->manager->isPageCheckoutEnabled( $context->getTitle() ) ) {
+			return '';
+		}
 		$entity = $this->manager->getCheckoutEntity( $context->getTitle() );
 		if ( !$entity ) {
 			return '';
