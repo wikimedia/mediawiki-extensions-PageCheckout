@@ -90,8 +90,16 @@ class AddContentActions implements SkinTemplateNavigation__UniversalHook {
 		$sktemplate->getOutput()->addModules( 'ext.pagecheckout.contentActions' );
 	}
 
+	/**
+	 * @param SkinTemplate $sktemplate
+	 * @param array &$links
+	 * @return void
+	 */
 	private function addCheckoutAction( SkinTemplate $sktemplate, array &$links ): void {
 		$title = $sktemplate->getTitle();
+		if ( !$this->manager->isPageCheckoutEnabled( $title ) ) {
+			return;
+		}
 		if ( $this->manager->isCheckedOut( $title ) ) {
 			return;
 		}

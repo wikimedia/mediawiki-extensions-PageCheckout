@@ -188,7 +188,8 @@
 		"NamespaceManager::getMetaFields": "integrateIntoNamespaceManager",
 		"BSApiNamespaceStoreMakeData": "integrateIntoNamespaceManager",
 		"NamespaceManager::editNamespace": "integrateIntoNamespaceManager",
-		"NamespaceManagerBeforePersistSettings": "integrateIntoNamespaceManager"
+		"NamespaceManagerBeforePersistSettings": "integrateIntoNamespaceManager",
+		"GetPreferences": "addCheckoutPromptPreference"
 	},
 	"HookHandlers": {
 		"addDatabaseTables": {
@@ -216,6 +217,9 @@
 		"integrateIntoNamespaceManager": {
 			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\IntegrateIntoNamespaceManager",
 			"services": [ "MainConfig", "NamespaceInfo" ]
+		},
+		"addCheckoutPromptPreference": {
+			"class": "\\MediaWiki\\Extension\\PageCheckout\\Hook\\AddCheckoutPromptPreference"
 		}
 	},
 	"GroupPermissions": {
@@ -234,6 +238,9 @@
 			"page-checkout-clear": true
 		}
 	},
+	"DefaultUserOptions": {
+		"page-checkout-show-popup": "1"
+	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
 	],
@@ -242,9 +249,9 @@
 		"pagecheckout/*": "LogFormatter"
 	},
 	"config": {
-		"PageCheckoutPromptToCheckoutOnEditNamespaces": {
+		"PageCheckoutEnabledNamespaces": {
 			"value": [],
-			"description": "Namespaces for which users will be prompted to checkout a page when they attempt to edit it without having it checked out."
+			"description": "Namespaces for which PageCheckout is enabled."
 		}
 	},
 	"RestRoutes": [

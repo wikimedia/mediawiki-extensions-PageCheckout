@@ -82,10 +82,13 @@ mw.hook( 've.activationComplete' ).add( async () => {
 		return;
 	}
 	initialized = true;
-	const enabledNamespaces = await require( './config.json' ).checkoutPromptEnabledNamespaces || [];
+	const enabledNamespaces = await require( './config.json' ).checkoutEnabledNamespaces || [];
 	const currentNamespace = mw.config.get( 'wgNamespaceNumber' );
 	const isEnabled = enabledNamespaces.indexOf( currentNamespace ) !== -1;
 	if ( !isEnabled ) {
+		return;
+	}
+	if ( mw.user.options.get( 'page-checkout-show-popup' ) !== '1' ) {
 		return;
 	}
 	try {

@@ -30,9 +30,9 @@ class IntegrateIntoNamespaceManager {
 	 */
 	public function onNamespaceManager__getMetaFields( &$aMetaFields ) { // phpcs:ignore MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName, Generic.Files.LineLength.TooLong
 		$aMetaFields[] = [
-			'name' => 'show-pagecheckout-popup',
+			'name' => 'enable-pagecheckout',
 			'type' => 'boolean',
-			'label' => Message::newFromKey( 'pagecheckout-ns-pref-show-popup' )->text(),
+			'label' => Message::newFromKey( 'pagecheckout-ns-pref-enable-pagecheckout' )->text(),
 			'filter' => [
 				'type' => 'boolean'
 			],
@@ -46,10 +46,10 @@ class IntegrateIntoNamespaceManager {
 	 * @return bool
 	 */
 	public function onBSApiNamespaceStoreMakeData( &$aResults ) {
-		$current = $this->config->get( 'PageCheckoutPromptToCheckoutOnEditNamespaces' );
+		$current = $this->config->get( 'PageCheckoutEnabledNamespaces' );
 		$iResults = count( $aResults );
 		for ( $i = 0; $i < $iResults; $i++ ) {
-			$aResults[ $i ][ 'show-pagecheckout-popup' ] = [
+			$aResults[ $i ][ 'enable-pagecheckout' ] = [
 				'value' => in_array( $aResults[ $i ][ 'id' ], $current ),
 				'disabled' => $aResults[ $i ]['isTalkNS']
 			];
@@ -73,10 +73,10 @@ class IntegrateIntoNamespaceManager {
 			return true;
 		}
 
-		if ( !$useInternalDefaults && isset( $additionalSettings['show-pagecheckout-popup'] ) ) {
-			$namespaceDefinitions[$ns][ 'show-pagecheckout-popup' ] = $additionalSettings['show-pagecheckout-popup'];
+		if ( !$useInternalDefaults && isset( $additionalSettings['enable-pagecheckout'] ) ) {
+			$namespaceDefinitions[$ns][ 'enable-pagecheckout' ] = $additionalSettings['enable-pagecheckout'];
 		} else {
-			$namespaceDefinitions[$ns][ 'show-pagecheckout-popup' ] = false;
+			$namespaceDefinitions[$ns][ 'enable-pagecheckout' ] = false;
 		}
 		return true;
 	}
@@ -87,7 +87,7 @@ class IntegrateIntoNamespaceManager {
 	public function onNamespaceManagerBeforePersistSettings(
 		array &$configuration, int $id, array $definition, array $mwGlobals
 	): void {
-		$enabledNamespaces = $mwGlobals['wgPageCheckoutPromptToCheckoutOnEditNamespaces'] ?? [];
+		$enabledNamespaces = $mwGlobals['wgPageCheckoutEnabledNamespaces'] ?? [];
 		if ( $this->namespaceInfo->isTalk( $id ) ) {
 			// Stabilization can not be activated for TALK namespaces!
 			return;
@@ -95,17 +95,17 @@ class IntegrateIntoNamespaceManager {
 		$currentlyActivated = in_array( $id, $enabledNamespaces );
 
 		$explicitlyDeactivated = false;
-		if ( isset( $definition['show-pagecheckout-popup'] ) && $definition['show-pagecheckout-popup'] === false ) {
+		if ( isset( $definition['enable-pagecheckout'] ) && $definition['enable-pagecheckout'] === false ) {
 			$explicitlyDeactivated = true;
 		}
 
 		$explicitlyActivated = false;
-		if ( isset( $definition['show-pagecheckout-popup'] ) && $definition['show-pagecheckout-popup'] === true ) {
+		if ( isset( $definition['enable-pagecheckout'] ) && $definition['enable-pagecheckout'] === true ) {
 			$explicitlyActivated = true;
 		}
 
 		if ( ( $currentlyActivated && !$explicitlyDeactivated ) || $explicitlyActivated ) {
-			$configuration['wgPageCheckoutPromptToCheckoutOnEditNamespaces'][] = $id;
+			$configuration['wgPageCheckoutEnabledNamespaces'][] = $id;
 		}
 	}
 }

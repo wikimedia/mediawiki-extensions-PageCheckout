@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\PageCheckout\Tests;
 
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\PluginManager;
@@ -46,8 +47,15 @@ class CheckoutManagerTest extends TestCase {
 
 		$specialLogLoggerMock = $this->createMock( SpecialLogLogger::class );
 		$pluginManagerMock = $this->createMock( PluginManager::class );
+		$configMock = $this->createMock( Config::class );
+		$configMock->method( 'get' )->willReturn( [ 0 ] );
 		$this->manager = new CheckoutManager(
-			$this->user, $this->checkoutRepoMock, $this->eventRepoMock, $specialLogLoggerMock, $pluginManagerMock
+			$this->user,
+			$this->checkoutRepoMock,
+			$this->eventRepoMock,
+			$specialLogLoggerMock,
+			$pluginManagerMock,
+			$configMock
 		);
 	}
 

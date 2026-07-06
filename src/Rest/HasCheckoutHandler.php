@@ -31,10 +31,9 @@ class HasCheckoutHandler extends SimpleHandler {
 		if ( !$title || !$title->exists() ) {
 			throw new HttpException( 'Invalid page', 400 );
 		}
-		$checkout = $this->checkoutManager->getCheckoutEntity( $title );
 
 		return $this->getResponseFactory()->createJson( [
-			'hasCheckout' => $checkout !== null
+			'hasCheckout' => $this->checkoutManager->isCheckedOut( $title ),
 		] );
 	}
 
