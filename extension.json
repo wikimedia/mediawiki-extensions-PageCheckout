@@ -144,6 +144,21 @@
 				"pagecheckout-ui-checkout-confirm"
 			]
 		},
+		"ext.pagecheckout.checkoutDialog": {
+			"packageFiles": [
+				"ui/CheckoutDialog.js"
+			],
+			"messages": [
+				"pagecheckout-ui-cancel-button",
+				"pagecheckout-ui-checkout-confirm",
+				"pagecheckout-action-checkout-label",
+				"pagecheckout-action-checkout-confirm-label"
+			],
+			"dependencies": [
+				"oojs-ui",
+				"ext.pagecheckout.boostrap"
+			]
+		},
 		"ext.pagecheckout.ve.checkout": {
 			"packageFiles": [
 				"ve.checkout.js",
@@ -153,10 +168,7 @@
 				}
 			],
 			"messages": [
-				"pagecheckout-ui-checkout-prompt-ve",
-				"pagecheckout-ui-cancel-button",
-				"pagecheckout-error-save-failed",
-				"pagecheckout-ui-checkout-success"
+				"pagecheckout-ui-checkout-prompt-ve"
 			],
 			"dependencies": [
 				"ext.pagecheckout.boostrap"

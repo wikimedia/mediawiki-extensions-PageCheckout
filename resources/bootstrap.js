@@ -24,30 +24,23 @@ window.ext.pageCheckout.actions = {
 			}
 		} );
 	},
-	openCheckoutPage: function ( page ) {
+	openCheckoutPage: function ( page, message ) {
 		const dfd = $.Deferred();
-		OO.ui.confirm( mw.msg( 'pagecheckout-ui-checkout-confirm' ), {
-			title: mw.msg( 'pagecheckout-action-checkout-label' ),
-			actions: [
-				{
-					label: mw.msg( 'pagecheckout-ui-cancel-button' ),
-					action: 'cancel'
-				},
-				{
-					label: mw.msg( 'pagecheckout-action-checkout-label' ),
-					flags: [ 'progressive' ],
-					action: 'accept'
+		( async () => {
+			await mw.loader.using( 'ext.pagecheckout.checkoutDialog' );
+			const wm = OO.ui.getWindowManager();
+			const dialog = new ext.pageCheckout.ui.CheckoutDialog( { message: message } );
+			wm.addWindows( [ dialog ] );
+			wm.openWindow( dialog ).closed.then( async ( data ) => {
+				if ( data && data.action === 'checkout' ) {
+					await ext.pageCheckout.api.checkoutPage( page );
+					mw.notify( mw.msg( 'pagecheckout-ui-checkout-success' ), { type: 'success' } );
+					dfd.resolve( true );
+				} else {
+					dfd.resolve( false );
 				}
-			]
-		} ).done( async ( confirmed ) => {
-			if ( confirmed ) {
-				await ext.pageCheckout.api.checkoutPage( page );
-				mw.notify( mw.msg( 'pagecheckout-ui-checkout-success' ), { type: 'success' } );
-				dfd.resolve( true );
-			} else {
-				dfd.resolve( false );
-			}
-		} );
+			} );
+		} )();
 		return dfd.promise();
 	},
 	openCheckinPage: async function () {
