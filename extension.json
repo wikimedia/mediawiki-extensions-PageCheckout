@@ -53,6 +53,13 @@
 		},
 		"PageCheckout": {
 			"Plugins": {}
+		},
+		"BlueSpiceGalaxyDistributionConnector": {
+			"NamespaceSettings": {
+				"pagecheckout": {
+					"class": "MediaWiki\\Extension\\PageCheckout\\Integration\\Galaxy\\NamespaceSetting"
+				}
+			}
 		}
 	},
 	"MessagesDirs": {
