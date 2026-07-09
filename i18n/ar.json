@@ -25,7 +25,7 @@
 	"log-description-pagecheckout": "تتبع حالة قفلات الصفحة وفتحها",
 	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|تم تسجيل الوصول إليها}} الصفحة $3 التي تم تسجيل خروجها لل{{GENDER:$4|مستخدم}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|تم تسجيل الخروج}} الصفحة $3 لل{{GENDER:$4|مستخدم}} $4",
-	"pagecheckout-alertbanner-checkout": "هذه الصفحة {{GENDER:$1|مغلقة}} حاليًا مقابل $2",
+	"pagecheckout-alertbanner-checkout": "هذه الصفحة مقفلة بمبلغ $2 . لا يمكنك تعديلها.",
 	"action-page-checkout-clear": "إزالة قفل الصفحة",
 	"right-page-checkout-clear": "إزالة قفل الصفحة",
 	"pagecheckout-alertbanner-checkout-with-comment": "هذه الصفحة {{GENDER:$1|مغلقة}} حاليًا مقابل $2 التعليق: $3",
@@ -52,5 +52,13 @@
 	"pagecheckout-ui-checkin-confirm": "أنت على وشك فتح هذه الصفحة هذا سيسمح للمستخدمين الآخرين بتحرير الصفحة.",
 	"pagecheckout-ui-checkin-comment-label": "تعليق",
 	"pagecheckout-ui-checkout-prompt-ve": "هل تريد قفل هذه الصفحة؟ هذا سوف يمنحك حقوق تحرير حصرية حتى تفتح الصفحة.",
-	"pagecheckout-prompt-on-edit": "ستظهر لك رسالة تطلب منك مراجعة الصفحة عند بدء عملية التحرير."
+	"pagecheckout-prompt-on-edit": "ستظهر لك رسالة تطلب منك مراجعة الصفحة عند بدء عملية التحرير.",
+	"pagecheckout-alertbanner-checkout-by-you": "لقد قمت بقفل هذه الصفحة. أنت وحدك من يستطيع تعديلها.",
+	"pagecheckout-workflow-activity-checkout-reason": "هذه الصفحة مغلقة حاليًا بسبب سير عمل جارٍ",
+	"pagecheckout-workflow-activity-checkout-non-generic-reason": "يتم قفلها أثناء تنفيذ سير العمل",
+	"pagecheckout-workflow-clear-checkout": "تم إلغاء القفل بسبب إجهاض سير العمل",
+	"pagecheckout-title-checkin-label": "صفحة فتح القفل",
+	"pagecheckout-ui-checkout-success": "تم قفل الصفحة بنجاح",
+	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح",
+	"pagecheckout-ns-pref-show-popup": "تنبيه لقفل الصفحة عند التحرير"
 }
