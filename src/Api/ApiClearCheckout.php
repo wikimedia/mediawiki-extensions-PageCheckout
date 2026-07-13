@@ -46,10 +46,16 @@ class ApiClearCheckout extends ApiBase {
 		$this->getResult()->addValue( null, $this->getModuleName(), [ 'success' => $res ] );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function mustBePosted() {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function isWriteMode() {
 		return true;
 	}
