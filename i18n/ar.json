@@ -55,6 +55,5 @@
 	"pagecheckout-ui-checkin-comment-label": "تعليق",
 	"pagecheckout-ui-checkout-prompt-ve": "هل تريد قفل هذه الصفحة؟ هذا سوف يمنحك حقوق تحرير حصرية حتى تفتح الصفحة.",
 	"pagecheckout-ui-checkout-success": "تم قفل الصفحة بنجاح",
-	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح",
-	"pagecheckout-ns-pref-show-popup": "تنبيه لقفل الصفحة عند التحرير"
+	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح"
 }

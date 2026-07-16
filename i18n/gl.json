@@ -54,6 +54,5 @@
 	"pagecheckout-ui-checkin-comment-label": "Comentario",
 	"pagecheckout-ui-checkout-prompt-ve": "Queres bloquear esta páxina? Isto outorgarache dereitos de edición exclusivos ata que a desbloquees.",
 	"pagecheckout-ui-checkout-success": "A páxina bloqueouse correctamente",
-	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente",
-	"pagecheckout-ns-pref-show-popup": "Solicitar o bloqueo da páxina ao editar"
+	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente"
 }

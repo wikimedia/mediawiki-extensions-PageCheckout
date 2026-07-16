@@ -54,6 +54,5 @@
 	"pagecheckout-ui-checkin-comment-label": "Коментар",
 	"pagecheckout-ui-checkout-prompt-ve": "Дали сакате да ја заклучите страницава? Ова ќе ви даде исклучиви уредувачки права додека не ја отклучите.",
 	"pagecheckout-ui-checkout-success": "Страницата е успешно заклучена",
-	"pagecheckout-ui-checkin-success": "Страницата е успешно отклучена",
-	"pagecheckout-ns-pref-show-popup": "Прашај за заклучување на страницата при уредување"
+	"pagecheckout-ui-checkin-success": "Страницата е успешно отклучена"
 }
