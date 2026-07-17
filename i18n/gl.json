@@ -47,6 +47,7 @@
 	"pagecheckout-action-checkin-label": "Desbloquear",
 	"pagecheckout-title-checkin-label": "Desbloquear a páxina",
 	"pagecheckout-action-checkout-label": "Bloquear a páxina",
+	"pagecheckout-action-checkout-confirm-label": "Bloquear",
 	"pagecheckout-checkin-not-checked-out-by-user": "Este usuario non bloqueou a páxina",
 	"pagecheckout-ui-checkout-confirm": "Estás a piques de bloquear esta páxina. Isto outorgarache dereitos de edición exclusivos ata que a desbloquees.",
 	"pagecheckout-ui-cancel-button": "Cancelar",
@@ -54,5 +55,10 @@
 	"pagecheckout-ui-checkin-comment-label": "Comentario",
 	"pagecheckout-ui-checkout-prompt-ve": "Queres bloquear esta páxina? Isto outorgarache dereitos de edición exclusivos ata que a desbloquees.",
 	"pagecheckout-ui-checkout-success": "A páxina bloqueouse correctamente",
-	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente"
+	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente",
+	"pagecheckout-pref-show-popup": "Solicitar o bloqueo da páxina ao comezar a edición",
+	"pagecheckout-pref-show-popup-help": "Solicitaráseche que bloquees a páxina cando comeces a editala. Sempre podes bloqueala máis tarde desde o menú da páxina.",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Bloqueo de páxinas",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Activar o bloqueo de páxinas para un usuario en particular para evitar que outras persoas as editen.",
+	"pagecheckout-error-disabled": "O bloqueo de páxinas non está activado neste espazo de nomes"
 }
