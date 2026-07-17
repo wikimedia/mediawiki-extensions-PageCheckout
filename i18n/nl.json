@@ -60,5 +60,11 @@
 	"pagecheckout-title-checkin-label": "Pagina ontgrendelen",
 	"pagecheckout-ui-checkout-success": "Pagina vergrendeld",
 	"pagecheckout-ui-checkin-success": "Pagina ontgrendeld",
-	"pagecheckout-ns-pref-show-popup": "Aanbieden om de pagina te vergrendelen tijdens bewerken"
+	"pagecheckout-ns-pref-show-popup": "Aanbieden om de pagina te vergrendelen tijdens bewerken",
+	"pagecheckout-action-checkout-confirm-label": "Vergrendelen",
+	"pagecheckout-pref-show-popup": "Aanbieden om de pagina te vergrendelen bij het starten van de bewerking.",
+	"pagecheckout-pref-show-popup-help": "U wordt gevraagd of u de pagina wilt vergrendelen wanneer u deze begint te bewerken. U kunt de pagina altijd later vergrendelen via het paginamenu.",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Paginavergrendeling",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Maak het mogelijk om pagina's te vergrendelen voor een gebruiker zodat anderen die tijdelijk niet kunnen bewerken.",
+	"pagecheckout-error-disabled": "Het vergrendelen van pagina's is niet ingeschakeld voor deze naamruimte"
 }
