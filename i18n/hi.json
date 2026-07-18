@@ -40,5 +40,6 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "अगर निर्दिष्ट नहीं किया जाता है तो कार्यप्रवाह के प्रासंगिक पृष्ठ का उपयोग किया जाएगा",
 	"pagecheckout-action-checkin-label": "पृष्ठ को चेक-इन करें",
 	"pagecheckout-action-checkout-label": "पृष्ठ को चेक-आउट करें",
-	"pagecheckout-checkin-not-checked-out-by-user": "पृष्ठ इस सदस्य द्वारा चेक-आउट नहीं किया हुआ है"
+	"pagecheckout-checkin-not-checked-out-by-user": "पृष्ठ इस सदस्य द्वारा चेक-आउट नहीं किया हुआ है",
+	"pagecheckout-action-checkout-confirm-label": "ताला"
 }
