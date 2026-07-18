@@ -59,5 +59,11 @@
 	"pagecheckout-title-checkin-label": "Desbloquear a páxina",
 	"pagecheckout-ui-checkout-success": "A páxina bloqueouse correctamente",
 	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente",
-	"pagecheckout-ns-pref-show-popup": "Solicitar o bloqueo da páxina ao editar"
+	"pagecheckout-ns-pref-show-popup": "Solicitar o bloqueo da páxina ao editar",
+	"pagecheckout-action-checkout-confirm-label": "Bloquear",
+	"pagecheckout-pref-show-popup": "Solicitar o bloqueo da páxina ao comezar a edición",
+	"pagecheckout-pref-show-popup-help": "Solicitaráseche que bloquees a páxina cando comeces a editala. Sempre podes bloqueala máis tarde desde o menú da páxina.",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Bloqueo de páxinas",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Activar o bloqueo de páxinas para un usuario en particular para evitar que outras persoas as editen.",
+	"pagecheckout-error-disabled": "O bloqueo de páxinas non está activado neste espazo de nomes"
 }
