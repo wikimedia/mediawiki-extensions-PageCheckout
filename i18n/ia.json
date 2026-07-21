@@ -54,6 +54,5 @@
 	"pagecheckout-ui-checkin-comment-label": "Commento",
 	"pagecheckout-ui-checkout-prompt-ve": "Vole tu serrar iste pagina? Isto te concedera le derecto exclusive de modification usque tu lo disserra.",
 	"pagecheckout-ui-checkout-success": "Pagina serrate con successo",
-	"pagecheckout-ui-checkin-success": "Pagina disserrate con successo",
-	"pagecheckout-ns-pref-show-popup": "Offerer de serrar le pagina quando on lo modifica"
+	"pagecheckout-ui-checkin-success": "Pagina disserrate con successo"
 }
