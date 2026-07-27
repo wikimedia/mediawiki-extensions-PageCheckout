@@ -23,7 +23,7 @@
 	"pagecheckout-ui-clear-confirm": "Bevestigt u het opheffen van de actieve vergrendeling op deze pagina? Hierdoor wordt de pagina bewerkbaar voor alle normaal bevoegde gebruikers",
 	"log-name-pagecheckout": "Paginavergrendelingen",
 	"log-description-pagecheckout": "Houdt de status van paginavergrendelingen en -ontgrendelingen bij",
-	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|heeft}} de pagina $3, die was voorbehouden aan de gebruiker $4, ontgrendeld",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|heeft}} de pagina $3 ontgrendeld, die was vergrendeld voor de gebruiker $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|heeft}} de pagina $3 vergrendeld voor de gebruiker $4",
 	"pagecheckout-alertbanner-checkout": "Deze pagina is vergrendeld door $2. U kunt de pagina niet bewerken.",
 	"pagecheckout-alertbanner-checkout-by-you": "U hebt deze pagina vergrendeld. Alleen u kunt de pagina bewerken.",
