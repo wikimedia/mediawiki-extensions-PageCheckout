@@ -22,10 +22,10 @@
 	"pagecheckout-ui-clear-confirm": "Сакате да го потврдете тргањето на заклучувањето на страницава? Ова ќе ја направи уредлива за сите вообичаено подобни корисници",
 	"log-name-pagecheckout": "Заклучувања на страници",
 	"log-description-pagecheckout": "Ја следи состојбата на заклучувања и отклучувања на страницата",
-	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|ја заклучи}} страницата $3 која беше земена за {{GENDER:$4|корисникот}} $4",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|ја отклучи}} страницата $3 која беше заклучена за {{GENDER:$4|корисникот}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|заклучи}} страницата $3 за {{GENDER:$4|корисникот}} $4",
-	"pagecheckout-alertbanner-checkout": "Оваа страница е моментално {{GENDER:$1|заклучена}} за $2",
-	"pagecheckout-alertbanner-checkout-by-you": "Оваа страница е моментално заклучена за вас. Имате исклучиви уредувачки права.",
+	"pagecheckout-alertbanner-checkout": "Оваа страница е заклучена од $2. Не можете да ја уредувате.",
+	"pagecheckout-alertbanner-checkout-by-you": "Ја имате заклучено оваа страница. Само вие можете да ја уредувате.",
 	"action-page-checkout-clear": "тргање на заклучување на страницата",
 	"right-page-checkout-clear": "Тргање на заклучување на страница",
 	"pagecheckout-alertbanner-checkout-with-comment": "Оваа страница е моментално {{GENDER:$1|заклучена}} за $2. Коментар: $3",
@@ -47,6 +47,7 @@
 	"pagecheckout-action-checkin-label": "Отклучи",
 	"pagecheckout-title-checkin-label": "Отклучи страница",
 	"pagecheckout-action-checkout-label": "Заклучи страница",
+	"pagecheckout-action-checkout-confirm-label": "Заклучи",
 	"pagecheckout-checkin-not-checked-out-by-user": "Страницата не е заклулчена од овој корисник",
 	"pagecheckout-ui-checkout-confirm": "На пат сте да ја заклучите страницата. Ова ќе ви даде исклучиви уредувачки права додека не ја отклучите.",
 	"pagecheckout-ui-cancel-button": "Откажи",
@@ -54,5 +55,10 @@
 	"pagecheckout-ui-checkin-comment-label": "Коментар",
 	"pagecheckout-ui-checkout-prompt-ve": "Дали сакате да ја заклучите страницава? Ова ќе ви даде исклучиви уредувачки права додека не ја отклучите.",
 	"pagecheckout-ui-checkout-success": "Страницата е успешно заклучена",
-	"pagecheckout-ui-checkin-success": "Страницата е успешно отклучена"
+	"pagecheckout-ui-checkin-success": "Страницата е успешно отклучена",
+	"pagecheckout-pref-show-popup": "Потсети ме да ја заклучам страницата кога ќе почнувам да ја уредувам",
+	"pagecheckout-pref-show-popup-help": "Потсетување да ја заклучам страницата кога ќе почнам да ја уредувам. Секогаш можете да ја заклучите подоцна од менито на страницата.",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Заклучување на страници",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Овозможи заклучување на сраници за даден корисник за да се спречат други да ја уредуваат.",
+	"pagecheckout-error-disabled": "Заклучувањето на страници не е овозможено за овој именски простор"
 }
