@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\PageCheckout\AlertProvider;
 
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
+use MediaWiki\Html\Html;
 use MWStake\MediaWiki\Component\AlertBanners\IAlertProvider;
 
 class PageCheckout implements IAlertProvider {
@@ -38,7 +39,7 @@ class PageCheckout implements IAlertProvider {
 		}
 		if ( $isOwner ) {
 			$message = $context->msg( 'pagecheckout-alertbanner-checkout-by-you' )->text();
-			$checkinButton = \Html::element( 'a', [
+			$checkinButton = Html::element( 'a', [
 				'href' => '#',
 				'id' => 'pagecheckout-checkin-button',
 				'class' => 'pagecheckout-checkin-button',
