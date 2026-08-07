@@ -57,8 +57,8 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Do you want to lock this page? This will grant you exclusive editing rights until you unlock the page.",
 	"pagecheckout-ui-checkout-success": "Page locked successfully",
 	"pagecheckout-ui-checkin-success": "Page unlocked successfully",
-	"pagecheckout-pref-show-popup": "Prompt to lock page when starting editing",
-	"pagecheckout-pref-show-popup-help": "Be prompted to lock the page when you start editing it. You can always lock the page later from the page menu.",
+	"pagecheckout-pref-show-popup-label": "Prompt me to lock the page when I start editing",
+	"pagecheckout-pref-show-popup-help-label": "Even if this prompt is disabled, the page can be locked at any time using the page menu.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Page locking",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Lock pages for editing by a single user",
 	"pagecheckout-error-disabled": "Locking pages is not enabled for this namespace"

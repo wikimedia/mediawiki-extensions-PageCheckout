@@ -34,5 +34,7 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Aktivität \"Seite auschecken\"",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Aktivität \"Seite einchecken\"",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Seitensperre",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seitenversionen erstellen"
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seitenversionen erstellen",
+	"pagecheckout-pref-show-popup-label": "Mich beim Start der Bearbeitung dazu auffordern, die Seite zu sperren",
+	"pagecheckout-pref-show-popup-help-label": "Auch wenn diese Abfrage deaktiviert ist, kann die Seite jederzeit über das Seitenmenü gesperrt werden."
 }
