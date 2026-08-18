@@ -5,17 +5,16 @@ namespace MediaWiki\Extension\PageCheckout\Repo;
 use DateTime;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEvent;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
+use MediaWiki\User\UserFactory;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 class CheckoutEventRepo {
-	/** @var ILoadBalancer */
-	private $loadBalancer;
-
-	public function __construct( ILoadBalancer $loadBalancer ) {
-		$this->loadBalancer = $loadBalancer;
+	public function __construct(
+		private readonly ILoadBalancer $loadBalancer,
+		private readonly UserFactory $userFactory,
+	) {
 	}
 
 	/**
@@ -90,7 +89,7 @@ class CheckoutEventRepo {
 		return new CheckoutEntity(
 			(int)$entityData['id'],
 			Title::newFromText( $entityData['title'] ),
-			MediaWikiServices::getInstance()->getUserFactory()->newFromName( $entityData['user'] ),
+			$this->userFactory->newFromName( $entityData['user'] ),
 			$entityData['payload']
 		);
 	}

@@ -11,7 +11,7 @@ return [
 		return new CheckoutManager(
 			RequestContext::getMain()->getUser(),
 			new CheckoutRepo( $services->getConnectionProvider(), $services->getObjectCacheFactory() ),
-			new CheckoutEventRepo( $services->getDBLoadBalancer() ),
+			new CheckoutEventRepo( $services->getDBLoadBalancer(), $services->getUserFactory() ),
 			new SpecialLogLogger(),
 			$services->getService( 'PageCheckout.PluginManager' ),
 			$services->getMainConfig()
