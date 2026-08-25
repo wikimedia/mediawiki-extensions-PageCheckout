@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"pagecheckout-desc": "د يو کارن لپاره په مخ کې ځانگړې رښتې ته اجازه ورکوي",
+	"pagecheckout-error-no-title": "ناسم سرليک",
+	"pagecheckout-error-no-user": "ناسم کارن ورکړل شوی",
+	"pagecheckout-error-has-checkout": "مخ لادمخه تاله شوی",
+	"pagecheckout-error-save-failed": "د مخ تاله کولو کې پاتې راغی"
+}
