@@ -60,6 +60,6 @@
 	"pagecheckout-pref-show-popup": "Prompt to lock page when starting editing",
 	"pagecheckout-pref-show-popup-help": "Be prompted to lock the page when you start editing it. You can always lock the page later from the page menu.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Page locking",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "Enable locking pages to a particular user to prevent others from editing them.",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Lock pages for editing by a single user",
 	"pagecheckout-error-disabled": "Locking pages is not enabled for this namespace"
 }
