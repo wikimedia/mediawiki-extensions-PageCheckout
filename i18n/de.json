@@ -32,5 +32,7 @@
 	"right-page-checkout-clear": "Checkout der Seite aufheben",
 	"pagecheckout-alertbanner-checkout-with-comment": "Die Seite ist aktuell für $2 {{GENDER:$1|ausgecheckt}}. Kommentar: $3",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Aktivität \"Seite auschecken\"",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Aktivität \"Seite einchecken\""
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Aktivität \"Seite einchecken\"",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Seitensperre",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seitenversionen erstellen"
 }
