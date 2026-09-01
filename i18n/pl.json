@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"PanWor"
+		]
+	},
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|odblokował|odblokowała|odblokował(a)}} stronę „$3”, która została zablokowana dla {{GENDER:$4|użytkownika|użytkowniczki}} $4",
+	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|zablokował|zablokowała|zablokował(a)}} stronę „$3” dla {{GENDER:$4|użytkownika|użytkowniczki}} $4"
+}
