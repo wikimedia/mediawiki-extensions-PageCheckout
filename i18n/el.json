@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"PrinceAzuka134"
+		]
+	},
+	"pagecheckout-error-has-checkout": "Η σελίδα είναι ήδη κλειδωμένη",
+	"pagecheckout-error-no-checkout": "Δεν είναι δυνατό το ξεκλείδωμα σελίδας που δεν είναι κλειδωμένη αυτήν τη στιγμή",
+	"pagecheckout-lockdown-reason": "Η ενέργεια \"$1\" δεν επιτρέπεται, επειδή η σελίδα είναι κλειδωμένη από $2",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2| ξεκλείδωτη}} σελίδα $3 που ήταν κλειδωμένη για τον χρήστη {{GENDER:$4| } $4",
+	"pagecheckout-alertbanner-checkout": "Αυτή η σελίδα είναι κλειδωμένη με $2. Δεν μπορείς να το επεξεργαστείς.",
+	"pagecheckout-alertbanner-checkout-by-you": "Έχετε κλειδώσει αυτήν τη σελίδα. Μόνο εσείς μπορείτε να την επεξεργαστείτε.",
+	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "Για ποιον θα κλειδωθεί η σελίδα",
+	"pagecheckout-checkin-not-checked-out-by-user": "Η σελίδα δεν είναι κλειδωμένη από αυτόν τον χρήστη",
+	"pagecheckout-ui-checkout-success": "Η σελίδα κλειδώθηκε με επιτυχία"
+}
