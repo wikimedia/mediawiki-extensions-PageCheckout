@@ -59,6 +59,6 @@
 	"pagecheckout-pref-show-popup": "Solicitar o bloqueo da páxina ao comezar a edición",
 	"pagecheckout-pref-show-popup-help": "Solicitaráseche que bloquees a páxina cando comeces a editala. Sempre podes bloqueala máis tarde desde o menú da páxina.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Bloqueo de páxinas",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "Activar o bloqueo de páxinas para un usuario en particular para evitar que outras persoas as editen.",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Bloquear páxinas para que un só usuario as poida editar",
 	"pagecheckout-error-disabled": "O bloqueo de páxinas non está activado neste espazo de nomes"
 }
