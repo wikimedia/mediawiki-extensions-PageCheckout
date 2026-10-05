@@ -246,7 +246,7 @@
 		}
 	},
 	"DefaultUserOptions": {
-		"page-checkout-show-popup": "1"
+		"page-checkout-show-popup": "0"
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
