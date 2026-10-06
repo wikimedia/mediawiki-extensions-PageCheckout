@@ -60,6 +60,6 @@
 	"pagecheckout-pref-show-popup": "مطالبة بقفل الصفحة عند بدء التحرير",
 	"pagecheckout-pref-show-popup-help": "سيُطلب منك قفل الصفحة عند بدء تحريرها. يمكنك قفل الصفحة لاحقًا من قائمة الصفحة.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "قفل الصفحة",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "قم بتمكين قفل الصفحات لمستخدم معين لمنع الآخرين من تعديلها.",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "قفل الصفحات ليتمكن مستخدم واحد من تحريرها",
 	"pagecheckout-error-disabled": "خاصية قفل الصفحات غير مفعلة لهذا النطاق."
 }
