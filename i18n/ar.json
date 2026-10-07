@@ -23,7 +23,7 @@
 	"pagecheckout-ui-clear-confirm": "تأكيد التخليص من القفل النشط على هذه الصفحة؟ هذا سيساعد على تحرير الصفحة لجميع المستخدمين المُؤهلين بشكل طبيعي",
 	"log-name-pagecheckout": "قفل الصفحة",
 	"log-description-pagecheckout": "تتبع حالة قفلات الصفحة وفتحها",
-	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|تم تسجيل الوصول إليها}} الصفحة $3 التي تم تسجيل خروجها لل{{GENDER:$4|مستخدم}} $4",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|أزال قفل}} الصفحة $3 التي كانت مقفلة للمستخدم {{GENDER:$4|مستخدم}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|تم تسجيل الخروج}} الصفحة $3 لل{{GENDER:$4|مستخدم}} $4",
 	"pagecheckout-alertbanner-checkout": "هذه الصفحة مقفلة بمبلغ $2 . لا يمكنك تعديلها.",
 	"pagecheckout-alertbanner-checkout-by-you": "لقد قمت بقفل هذه الصفحة. أنت وحدك من يستطيع تعديلها.",
