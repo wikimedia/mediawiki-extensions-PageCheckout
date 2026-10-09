@@ -57,8 +57,6 @@
 	"pagecheckout-ui-checkout-prompt-ve": "هل تريد قفل هذه الصفحة؟ هذا سوف يمنحك حقوق تحرير حصرية حتى تفتح الصفحة.",
 	"pagecheckout-ui-checkout-success": "تم قفل الصفحة بنجاح",
 	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح",
-	"pagecheckout-pref-show-popup": "مطالبة بقفل الصفحة عند بدء التحرير",
-	"pagecheckout-pref-show-popup-help": "سيُطلب منك قفل الصفحة عند بدء تحريرها. يمكنك قفل الصفحة لاحقًا من قائمة الصفحة.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "قفل الصفحة",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "قفل الصفحات ليتمكن مستخدم واحد من تحريرها",
 	"pagecheckout-error-disabled": "خاصية قفل الصفحات غير مفعلة لهذا النطاق."

@@ -56,8 +56,6 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Дали сакате да ја заклучите страницава? Ова ќе ви даде исклучиви уредувачки права додека не ја отклучите.",
 	"pagecheckout-ui-checkout-success": "Страницата е успешно заклучена",
 	"pagecheckout-ui-checkin-success": "Страницата е успешно отклучена",
-	"pagecheckout-pref-show-popup": "Потсети ме да ја заклучам страницата кога ќе почнувам да ја уредувам",
-	"pagecheckout-pref-show-popup-help": "Потсетување да ја заклучам страницата кога ќе почнам да ја уредувам. Секогаш можете да ја заклучите подоцна од менито на страницата.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Заклучување на страници",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Овозможи заклучување на сраници за даден корисник за да се спречат други да ја уредуваат.",
 	"pagecheckout-error-disabled": "Заклучувањето на страници не е овозможено за овој именски простор"

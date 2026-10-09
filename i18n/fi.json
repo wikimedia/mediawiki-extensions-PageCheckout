@@ -33,5 +33,7 @@
 	"pagecheckout-ui-checkin-confirm": "Olet avaamassa tämän sivun lukitusta. Tämä antaa muille käyttäjille sivun muokkausoikeudet.",
 	"pagecheckout-ui-checkout-prompt-ve": "Haluatko lukita tämän sivun? Saat yksinoikeuden muokkauksiin aina siihen asti, kunnes avaat sivun lukituksen.",
 	"pagecheckout-ui-checkout-success": "Sivu on lukittu",
-	"pagecheckout-ui-checkin-success": "Sivun lukitus on avattu"
+	"pagecheckout-ui-checkin-success": "Sivun lukitus on avattu",
+	"pagecheckout-pref-show-popup-label": "Pyydä minua lukitsemaan sivu, kun aloitan muokkauksen",
+	"pagecheckout-pref-show-popup-help-label": "Vaikka tämä kehote otettaisiin pois käytöstä, sivun voi lukita milloin tahansa sivuvalikosta."
 }

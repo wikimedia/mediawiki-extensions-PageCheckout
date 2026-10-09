@@ -56,8 +56,8 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Queres bloquear esta páxina? Isto outorgarache dereitos de edición exclusivos ata que a desbloquees.",
 	"pagecheckout-ui-checkout-success": "A páxina bloqueouse correctamente",
 	"pagecheckout-ui-checkin-success": "A páxina desbloqueouse correctamente",
-	"pagecheckout-pref-show-popup": "Solicitar o bloqueo da páxina ao comezar a edición",
-	"pagecheckout-pref-show-popup-help": "Solicitaráseche que bloquees a páxina cando comeces a editala. Sempre podes bloqueala máis tarde desde o menú da páxina.",
+	"pagecheckout-pref-show-popup-label": "Preguntádeme se quero bloquear unha páxina ao comezar a editala",
+	"pagecheckout-pref-show-popup-help-label": "Mesmo se esta opción está desactivada, a páxina pódese bloquear en calquera momento usando o menú da páxina.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Bloqueo de páxinas",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Bloquear páxinas para que un só usuario as poida editar",
 	"pagecheckout-error-disabled": "O bloqueo de páxinas non está activado neste espazo de nomes"

@@ -56,8 +56,8 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Ma rabtaa inaad xirto boggan? Tani waxay ku siin doontaa xuquuq gaar ah oo tafatirid ah ilaa aad bogga furto.",
 	"pagecheckout-ui-checkout-success": "Bogga si guul leh ayaa loo qufulay",
 	"pagecheckout-ui-checkin-success": "Bogga si guul leh ayaa loo furay",
-	"pagecheckout-pref-show-popup": "Digniinta lagu weydiinayo qufulka bogga marka tafatirka la bilaabayo",
-	"pagecheckout-pref-show-popup-help": "Waxaa lagu weydiin doonaa inaad qufultaa bogga marka aad bilowdo tafatirkiisa. Mar walba waad qufuli kartaa bogga dambe adigoo adeegsanaya liiska bogga.",
+	"pagecheckout-pref-show-popup-label": "I weydii inaan bogga qufulo marka aan bilaabo tafatirka",
+	"pagecheckout-pref-show-popup-help-label": "Xitaa haddii doorashadan la damiyo, bogga waa la qufuli karaa wakhti kasta iyadoo la adeegsanayo liiska bogga.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Qufulida bogga",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Quful bogagga tafatirka hal isticmaale",
 	"pagecheckout-error-disabled": "Qufulida bogagga looma awood gelin meel magaca"

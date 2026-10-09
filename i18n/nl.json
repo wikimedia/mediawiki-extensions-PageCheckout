@@ -57,8 +57,6 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Wilt u deze pagina vergrendelen? Hiermee krijgt u exclusieve bewerkingsrechten totdat u de pagina weer ontgrendelt.",
 	"pagecheckout-ui-checkout-success": "Pagina vergrendeld",
 	"pagecheckout-ui-checkin-success": "Pagina ontgrendeld",
-	"pagecheckout-pref-show-popup": "Aanbieden om de pagina te vergrendelen bij het starten van de bewerking.",
-	"pagecheckout-pref-show-popup-help": "U wordt gevraagd of u de pagina wilt vergrendelen wanneer u deze begint te bewerken. U kunt de pagina altijd later vergrendelen via het paginamenu.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Paginavergrendeling",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Pagina’s vergrendelen zodat ze door één gebruiker bewerkt kunnen worden",
 	"pagecheckout-error-disabled": "Het vergrendelen van pagina's is niet ingeschakeld voor deze naamruimte"
