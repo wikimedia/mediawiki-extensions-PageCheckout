@@ -23,7 +23,7 @@
 	"pagecheckout-ui-clear-confirm": "تأكيد التخليص من القفل النشط على هذه الصفحة؟ هذا سيساعد على تحرير الصفحة لجميع المستخدمين المُؤهلين بشكل طبيعي",
 	"log-name-pagecheckout": "قفل الصفحة",
 	"log-description-pagecheckout": "تتبع حالة قفلات الصفحة وفتحها",
-	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|تم تسجيل الوصول إليها}} الصفحة $3 التي تم تسجيل خروجها لل{{GENDER:$4|مستخدم}} $4",
+	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|أزال قفل}} الصفحة $3 التي كانت مقفلة للمستخدم {{GENDER:$4|مستخدم}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|تم تسجيل الخروج}} الصفحة $3 لل{{GENDER:$4|مستخدم}} $4",
 	"pagecheckout-alertbanner-checkout": "هذه الصفحة مقفلة بمبلغ $2 . لا يمكنك تعديلها.",
 	"pagecheckout-alertbanner-checkout-by-you": "لقد قمت بقفل هذه الصفحة. أنت وحدك من يستطيع تعديلها.",
@@ -57,9 +57,7 @@
 	"pagecheckout-ui-checkout-prompt-ve": "هل تريد قفل هذه الصفحة؟ هذا سوف يمنحك حقوق تحرير حصرية حتى تفتح الصفحة.",
 	"pagecheckout-ui-checkout-success": "تم قفل الصفحة بنجاح",
 	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح",
-	"pagecheckout-pref-show-popup": "مطالبة بقفل الصفحة عند بدء التحرير",
-	"pagecheckout-pref-show-popup-help": "سيُطلب منك قفل الصفحة عند بدء تحريرها. يمكنك قفل الصفحة لاحقًا من قائمة الصفحة.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "قفل الصفحة",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "قم بتمكين قفل الصفحات لمستخدم معين لمنع الآخرين من تعديلها.",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "قفل الصفحات ليتمكن مستخدم واحد من تحريرها",
 	"pagecheckout-error-disabled": "خاصية قفل الصفحات غير مفعلة لهذا النطاق."
 }

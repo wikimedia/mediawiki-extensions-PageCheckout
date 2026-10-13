@@ -57,8 +57,6 @@
 	"pagecheckout-ui-checkout-prompt-ve": "Quer reservar esta página? Isso irá conceder-lhe direitos exclusivos de edição até que você remova a reserva.",
 	"pagecheckout-ui-checkout-success": "A página foi reservada com sucesso",
 	"pagecheckout-ui-checkin-success": "A reserva da página foi removida com sucesso",
-	"pagecheckout-pref-show-popup": "Solicitar a reserva da página ao começar uma edição",
-	"pagecheckout-pref-show-popup-help": "Solicite a reserva da página assim que começar a editá-la. Pode sempre reservar a página mais tarde a partir do menu «Página».",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Reserva de páginas",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Ativar reservas de páginas para utilizadores específicos, impedindo que outros as editem.",
 	"pagecheckout-error-disabled": "A reserva de páginas não está ativada para este domínio"
