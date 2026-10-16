@@ -66,5 +66,7 @@
 	"pagecheckout-pref-show-popup-help": "Help text for the user preference that enables or disables the prompt to check out a page when starting to edit",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Label for the namespace preference",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "Help text for the namespace preference",
-	"pagecheckout-error-disabled": "Error message shown when a user tries to check out a page in a namespace where the feature is disabled"
+	"pagecheckout-error-disabled": "Error message shown when a user tries to check out a page in a namespace where the feature is disabled",
+	"pagecheckout-pref-show-popup-label": "Label for the user preference that enables or disables the prompt to check out a page when starting to edit",
+	"pagecheckout-pref-show-popup-help-label": "Help text for the user preference that enables or disables the prompt to check out a page when starting to edit"
 }

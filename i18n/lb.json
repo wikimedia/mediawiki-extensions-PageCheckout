@@ -10,5 +10,6 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-pagename": "Numm vun der Säit",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "Benotzer",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "Numm vun der Säit",
-	"pagecheckout-ui-cancel-button": "Ofbriechen"
+	"pagecheckout-ui-cancel-button": "Ofbriechen",
+	"pagecheckout-error-no-user": "Ongültege Benotzer uginn"
 }

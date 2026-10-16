@@ -35,5 +35,9 @@
 	"page-checkout-workflow-clear-checkout": "Checkout aufgrund Abbruch des Workflows aufgehoben",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "Aktivität \"Seite auschecken\"",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-title": "Aktivität \"Seite einchecken\"",
-	"pagecheckout-alertbanner-checkout-by-you": "{{#FORMAL:Du hast|Sie haben}} diese Seite gesperrt. {{#FORMAL:Nur du kannst|Nur Sie können}} sie bearbeiten."
+	"pagecheckout-alertbanner-checkout-by-you": "{{#FORMAL:Du hast|Sie haben}} diese Seite gesperrt. {{#FORMAL:Nur du kannst|Nur Sie können}} sie bearbeiten.",
+	"pagecheckout-pref-show-popup-label": "Mich beim Start der Bearbeitung dazu auffordern, die Seite zu sperren",
+	"pagecheckout-pref-show-popup-help-label": "Auch wenn diese Abfrage deaktiviert ist, kann die Seite jederzeit über das Seitenmenü gesperrt werden.",
+	"pagecheckout-ns-pref-enable-pagecheckout": "Seitensperre",
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seitenversionen erstellen"
 }
