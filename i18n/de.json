@@ -39,5 +39,5 @@
 	"pagecheckout-pref-show-popup-label": "Mich beim Start der Bearbeitung dazu auffordern, die Seite zu sperren",
 	"pagecheckout-pref-show-popup-help-label": "Auch wenn diese Abfrage deaktiviert ist, kann die Seite jederzeit über das Seitenmenü gesperrt werden.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "Seitensperre",
-	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seitenversionen erstellen"
+	"pagecheckout-ns-pref-enable-pagecheckout-help": "Seiten für die Bearbeitung durch einen einzelnen Benutzer sperren"
 }
