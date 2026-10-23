@@ -59,5 +59,7 @@
 	"pagecheckout-ui-checkin-success": "تم فتح الصفحة بنجاح",
 	"pagecheckout-ns-pref-enable-pagecheckout": "قفل الصفحة",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "قفل الصفحات ليتمكن مستخدم واحد من تحريرها",
-	"pagecheckout-error-disabled": "خاصية قفل الصفحات غير مفعلة لهذا النطاق."
+	"pagecheckout-error-disabled": "خاصية قفل الصفحات غير مفعلة لهذا النطاق.",
+	"pagecheckout-pref-show-popup-label": "أريد أن أطلب مني قفل الصفحة عند بدء التحرير",
+	"pagecheckout-pref-show-popup-help-label": "حتى في حالة تعطيل هذا التنبيه، يمكن قفل الصفحة في أي وقت باستخدام قائمة الصفحة."
 }
