@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\PageCheckout\Repo;
 
 use InvalidArgumentException;
 use MediaWiki\Extension\PageCheckout\Entity\CheckoutEntity;
+use MediaWiki\ObjectCache\ObjectCacheFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use ObjectCacheFactory;
 use Wikimedia\Rdbms\DBError;
 use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IDatabase;
