@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\PageCheckout\Rest;
 
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Rest\HttpException;
@@ -37,7 +38,7 @@ class ClearCheckoutHandler extends SimpleHandler {
 		}
 		$user = RequestContext::getMain()->getUser();
 		if ( !$this->permissionManager->userHasRight( $user, 'page-checkout-clear' ) ) {
-			throw new \PermissionsError( 'page-checkout-clear' );
+			throw new PermissionsError( 'page-checkout-clear' );
 		}
 		$this->checkoutManager->clearCheckout( $title );
 		return $this->getResponseFactory()->createJson( [ 'success' => true ] );
