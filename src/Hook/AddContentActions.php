@@ -7,7 +7,7 @@ namespace MediaWiki\Extension\PageCheckout\Hook;
 use MediaWiki\Extension\PageCheckout\CheckoutManager;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
-use SkinTemplate;
+use MediaWiki\Skin\SkinTemplate;
 
 class AddContentActions implements SkinTemplateNavigation__UniversalHook {
 
