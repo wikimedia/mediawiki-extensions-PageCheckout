@@ -26,9 +26,13 @@
 	"logentry-pagecheckout-checkin": "$1{{GENDER:$2|解鎖了}}已為{{GENDER:$4|使用者}}$4鎖定的頁面$3",
 	"logentry-pagecheckout-checkout": "$1已為使用者$4{{GENDER:$2|鎖住}}頁面$3",
 	"pagecheckout-alertbanner-checkout": "此頁面已被 $2 鎖定。您無法編輯它。",
+	"pagecheckout-alertbanner-checkout-by-you": "您已鎖定此頁面。只有您可以編輯。",
 	"action-page-checkout-clear": "清除頁面鎖定",
 	"right-page-checkout-clear": "清除頁面鎖定",
 	"pagecheckout-alertbanner-checkout-with-comment": "此頁面目前已為$2{{GENDER:$1|鎖定}}。註釋：$3",
+	"pagecheckout-workflow-activity-checkout-reason": "此頁面目前由於正在進行工作流程而被鎖定。",
+	"pagecheckout-workflow-activity-checkout-non-generic-reason": "在工作流程執行期間被鎖定",
+	"pagecheckout-workflow-clear-checkout": "因工作流程中止而解除鎖定",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-title": "「頁面鎖定」行動",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user": "使用者",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkout-property-user-help": "頁面將為誰鎖定",
@@ -40,9 +44,5 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user": "使用者",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "頁面將為誰解鎖",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "頁面名稱",
-	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "若未指定，將使用工作流程情境頁面",
-	"pagecheckout-alertbanner-checkout-by-you": "您已鎖定此頁面。只有您可以編輯。",
-	"pagecheckout-workflow-activity-checkout-reason": "此頁面目前由於正在進行工作流程而被鎖定。",
-	"pagecheckout-workflow-activity-checkout-non-generic-reason": "在工作流程執行期間被鎖定",
-	"pagecheckout-workflow-clear-checkout": "因工作流程中止而解除鎖定"
+	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "若未指定，將使用工作流程情境頁面"
 }
