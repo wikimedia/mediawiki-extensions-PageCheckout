@@ -57,6 +57,8 @@
 	"pagecheckout-ui-checkout-prompt-ve": "이 문서를 잠그시겠습니까? 잠그면 잠금 해제할 때까지 다른 사용자가 문서를 편집할 수 없습니다.",
 	"pagecheckout-ui-checkout-success": "문서 성공적으로 잠김",
 	"pagecheckout-ui-checkin-success": "문서 성공적으로 잠금 해제됨",
+	"pagecheckout-pref-show-popup-label": "편집을 시작하면 문서를 잠그도록 나에게 물어보기",
+	"pagecheckout-pref-show-popup-help-label": "물어보기가 비활성화 되어 있더라도, 문서 메뉴를 사용하여 언제든지 문서를 잠글 수 있습니다.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "문서 잠금",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "문서 편집 권한을 한 명의 사용자만 갖도록 잠금",
 	"pagecheckout-error-disabled": "이 이름공간에서는 문서 잠금 기능이 활성화되어 있지 않습니다"
