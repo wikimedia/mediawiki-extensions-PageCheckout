@@ -66,5 +66,7 @@
 	"pagecheckout-pref-show-popup-help": "문서 편집을 시작할 때 문서를 잠글지 묻는 메시지가 표시됩니다. 나중에 문서 메뉴에서 언제든지 문서를 잠글 수 있습니다.",
 	"pagecheckout-ns-pref-enable-pagecheckout": "문서 잠금",
 	"pagecheckout-ns-pref-enable-pagecheckout-help": "문서 편집 권한을 한 명의 사용자만 갖도록 잠금",
-	"pagecheckout-error-disabled": "이 이름공간에서는 문서 잠금 기능이 활성화되어 있지 않습니다"
+	"pagecheckout-error-disabled": "이 이름공간에서는 문서 잠금 기능이 활성화되어 있지 않습니다",
+	"pagecheckout-pref-show-popup-label": "편집을 시작하면 문서를 잠그도록 나에게 물어보기",
+	"pagecheckout-pref-show-popup-help-label": "물어보기가 비활성화 되어 있더라도, 문서 메뉴를 사용하여 언제든지 문서를 잠글 수 있습니다."
 }
