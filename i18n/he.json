@@ -28,6 +28,7 @@
 	"logentry-pagecheckout-checkin": "$1 {{GENDER:$2|ביטל|ביטלה}} את נעילת הדף $3, שהיה נעול עבור {{GENDER:$4|המשתמש|המשתמשת}} $4",
 	"logentry-pagecheckout-checkout": "$1 {{GENDER:$2|נעל|נעלה}} את הדף $3 עבור {{GENDER:$4|המשתמש|המשתמשת}} $4",
 	"pagecheckout-alertbanner-checkout": "הדף הזה נעול על־ידי $2. אין לך אפשרות לערוך אותו.",
+	"pagecheckout-alertbanner-checkout-by-you": "נעלת את הדף הזה. רק לך יש הרשאה לערוך אותו.",
 	"action-page-checkout-clear": "לבטל את נעילת הדף",
 	"right-page-checkout-clear": "ביטול נעילת הדף",
 	"pagecheckout-alertbanner-checkout-with-comment": "הדף הזה נעול כעת עבור {{GENDER:$1|המשתמש|המשתמשת}} $2. הערה: $3",
@@ -43,6 +44,5 @@
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-user-help": "עבור מי תבוטל נעילת הדף",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename": "שם הדף",
 	"pagecheckout-ui-workflows-inspector-activity-page-checkin-property-pagename-help": "אם זה לא צוין, ייעשה שימוש בדף ההקשר של זרימת העבודה",
-	"pagecheckout-ui-cancel-button": "ביטול",
-	"pagecheckout-alertbanner-checkout-by-you": "נעלת את הדף הזה. רק לך יש הרשאה לערוך אותו."
+	"pagecheckout-ui-cancel-button": "ביטול"
 }
